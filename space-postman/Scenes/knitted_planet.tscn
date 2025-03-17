@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://h8wsiccegn03"]
+[gd_scene load_steps=2 format=3 uid="uid://h8wsiccegn03"]
+
+[ext_resource type="PackedScene" uid="uid://dinasir8kgc7n" path="res://Scenes/postman.tscn" id="1_p0y2u"]
 
 [node name="KnittedPlanet" type="Node2D"]
+
+[node name="Postman" parent="." instance=ExtResource("1_p0y2u")]
+position = Vector2(134, 187)
