@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dinasir8kgc7n"]
+
+[ext_resource type="Script" path="res://Scenes/postman.gd" id="1_v238p"]
+
+[node name="Postman" type="CharacterBody2D"]
+script = ExtResource("1_v238p")
