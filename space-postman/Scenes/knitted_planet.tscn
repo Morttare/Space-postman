@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://h8wsiccegn03"]
+[gd_scene load_steps=4 format=3 uid="uid://h8wsiccegn03"]
 
 [ext_resource type="PackedScene" uid="uid://dinasir8kgc7n" path="res://Scenes/postman.tscn" id="1_p0y2u"]
+[ext_resource type="Script" path="res://Scenes/camera_2d.gd" id="2_isa5v"]
+[ext_resource type="Texture2D" uid="uid://bnyrccunyx65v" path="res://Sprites/icon.svg" id="3_1boxv"]
 
 [node name="KnittedPlanet" type="Node2D"]
 
 [node name="Postman" parent="." instance=ExtResource("1_p0y2u")]
 position = Vector2(134, 187)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_isa5v")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(387, 190)
+texture = ExtResource("3_1boxv")

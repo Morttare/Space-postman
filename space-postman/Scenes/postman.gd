@@ -9,6 +9,7 @@ const TILE_SIZE = 16
 
 var initial_position = Vector2(0,0)
 var is_moving = false
+var direction = 3
 
 
 func _ready():
@@ -24,6 +25,7 @@ func _physics_process(delta: float) -> void:
 func process_player_input():
 	var direction_horizontal := Input.get_axis("move_left", "move_right")
 	var direction_vertical := Input.get_axis("move_up", "move_down")
+	handle_animations(direction_horizontal, direction_vertical)
 		
 	if direction_horizontal:
 		velocity.x = direction_horizontal * walk_speed
@@ -36,3 +38,26 @@ func process_player_input():
 		
 	else:
 		velocity.y = move_toward(velocity.y, 0, walk_speed)
+
+func handle_animations(direction_horizontal, direction_vertical):
+	if direction_horizontal > 0.0:
+		direction = 3
+		# animation to right
+	elif direction_horizontal < 0.0:
+		direction = 9
+		# animation to left
+	elif direction_vertical < 0.0:
+		direction = 12
+		# animation to up
+	elif direction_vertical > 0.0:
+		direction = 6
+		# animation to down
+	else:
+		pass
+		# animation to direction
+		
+		
+		
+		
+		
+		
