@@ -11,12 +11,11 @@ var initial_position = Vector2(0,0)
 var is_moving = false
 var direction = 3
 
-
 func _ready():
 	initial_position = position
 
 func _physics_process(delta: float) -> void:
-	if is_moving == false:
+	if is_moving == false and Dialogic.current_timeline == null:
 		process_player_input()
 		move_and_slide()
 	else:
