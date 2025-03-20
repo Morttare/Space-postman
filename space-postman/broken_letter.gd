@@ -1,9 +1,8 @@
 extends Area2D
 
-var is_met = false
-var is_solved = false
-
+@export var letter_name : String
 @onready var postman = get_node("/root/KnittedPlanet/Postman")
+@onready var grandma = get_node("/root/KnittedPlanet/Grandma")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,28 +11,18 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if grandma.is_met and not $Sprite2D.visible:
+		$Sprite2D.visible = true
 	if Input.is_action_just_pressed("interact"):
 		if $Label.visible:
-			if Dialogic.current_timeline == null:
-				if not is_met:
-					is_met = true
-					Dialogic.start("grandma_meet")
-				else:
-					if is_solved:
-						Dialogic.start("grandma_generic")
-					elif len(postman.letters) == 4:
-						is_solved = true
-						Dialogic.start("grandma_letters_found")
-					else:
-						Dialogic.start("grandma_letters_not_found")
+			postman.letters.append(letter_name)
+			free()
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Postman":
+	if body.name == "Postman" and grandma.is_met:
 		$Label.visible = true
-
-
-
+		
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "Postman":
 		$Label.visible = false

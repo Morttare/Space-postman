@@ -26,6 +26,7 @@ directories/dch_directory={
 "Postman": "res://Dialogic/Grandma/Postman.dch"
 }
 directories/dtl_directory={
+"grandma_generic": "res://Dialogic/Grandma/grandma_generic.dtl",
 "grandma_letters_found": "res://Dialogic/Grandma/grandma_letters_found.dtl",
 "grandma_letters_not_found": "res://Dialogic/Grandma/grandma_puzzle_in_progress.dtl",
 "grandma_meet": "res://Dialogic/Grandma/grandma_meet.dtl"

@@ -11,6 +11,8 @@ var initial_position = Vector2(0,0)
 var is_moving = false
 var direction = 3
 
+var letters = []
+
 func _ready():
 	initial_position = position
 
