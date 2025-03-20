@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dy8fota12a4gb" path="res://Scenes/broken_letter.tscn" id="5_oi0vk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y6p5m"]
-size = Vector2(130, 135)
+size = Vector2(173, 182)
 
 [node name="KnittedPlanet" type="Node2D"]
 
@@ -28,7 +28,7 @@ script = ExtResource("4_iu7xk")
 texture = ExtResource("4_r4cpi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Grandma"]
-position = Vector2(3, 0.5)
+position = Vector2(1.5, -2)
 shape = SubResource("RectangleShape2D_y6p5m")
 
 [node name="Label" type="Label" parent="Grandma"]

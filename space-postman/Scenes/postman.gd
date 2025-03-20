@@ -43,19 +43,27 @@ func process_player_input():
 func handle_animations(direction_horizontal, direction_vertical):
 	if direction_horizontal > 0.0:
 		direction = 3
-		# animation to right
+		$AnimatedSprite2D.play("walk_right")
 	elif direction_horizontal < 0.0:
 		direction = 9
-		# animation to left
+		$AnimatedSprite2D.play("walk_left")
 	elif direction_vertical < 0.0:
 		direction = 12
-		# animation to up
+		$AnimatedSprite2D.play("walk_up")
 	elif direction_vertical > 0.0:
 		direction = 6
-		# animation to down
+		$AnimatedSprite2D.play("walk_down")
 	else:
-		pass
-		# animation to direction
+		if direction == 3:
+			$AnimatedSprite2D.play("right")
+		elif direction == 9:
+			$AnimatedSprite2D.play("left")
+		elif direction == 12:
+			$AnimatedSprite2D.play("up")
+		elif direction == 6:
+			$AnimatedSprite2D.play("down")
+		else:
+			$AnimatedSprite2D.play("idle")
 		
 		
 		
