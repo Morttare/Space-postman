@@ -11,14 +11,20 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
-
-func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Postman":
+	if Input.is_action_just_pressed("interact"):
 		if Dialogic.current_timeline == null:
 			if not is_met:
 				is_met = true
 				Dialogic.start("grandma_meet")
 			else:
-				Dialogic.start("grandma_puzzle_in_progress")
+				Dialogic.start("grandma_letters_found")
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == "Postman":
+		$Label.visible = true
+	
+
+func _on_grandma_body_exited(body: Node2D) -> void:
+	if body.name == "Postman":
+		$Label.visible = false

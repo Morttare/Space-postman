@@ -30,4 +30,13 @@ texture = ExtResource("4_r4cpi")
 position = Vector2(3, 0.5)
 shape = SubResource("RectangleShape2D_y6p5m")
 
+[node name="Label" type="Label" parent="Grandma"]
+visible = false
+offset_left = -54.0
+offset_top = 73.0
+offset_right = 55.0
+offset_bottom = 96.0
+text = "Press E to talk"
+
 [connection signal="body_entered" from="Grandma" to="Grandma" method="_on_body_entered"]
+[connection signal="body_exited" from="Grandma" to="Postman" method="_on_grandma_body_exited"]
