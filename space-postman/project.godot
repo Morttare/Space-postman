@@ -28,8 +28,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "grandma_generic": "res://Dialogic/Grandma/grandma_generic.dtl",
 "grandma_letters_found": "res://Dialogic/Grandma/grandma_letters_found.dtl",
-"grandma_letters_not_found": "res://Dialogic/Grandma/grandma_puzzle_in_progress.dtl",
-"grandma_meet": "res://Dialogic/Grandma/grandma_meet.dtl"
+"grandma_meet": "res://Dialogic/Grandma/grandma_meet.dtl",
+"grandma_puzzle_in_progress": "res://Dialogic/Grandma/grandma_puzzle_in_progress.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -55,6 +55,12 @@ variables={}
 layout/style_list=[]
 layout/default_style="Default"
 glossary/default_case_sensitive=true
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
