@@ -40,16 +40,16 @@ offset_bottom = 96.0
 text = "Press E to talk"
 
 [node name="Broken letter" parent="." instance=ExtResource("5_oi0vk")]
-position = Vector2(381, -86)
+position = Vector2(122, -474)
 
 [node name="Broken letter2" parent="." instance=ExtResource("5_oi0vk")]
-position = Vector2(624, -31)
+position = Vector2(-712, 144)
 
 [node name="Broken letter3" parent="." instance=ExtResource("5_oi0vk")]
-position = Vector2(659, 170)
+position = Vector2(723, 156)
 
 [node name="Broken letter4" parent="." instance=ExtResource("5_oi0vk")]
-position = Vector2(480, 428)
+position = Vector2(157, 456)
 
 [connection signal="body_entered" from="Grandma" to="Grandma" method="_on_body_entered"]
 [connection signal="body_exited" from="Grandma" to="Grandma" method="_on_body_exited"]

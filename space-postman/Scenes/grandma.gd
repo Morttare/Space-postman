@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 						Dialogic.start("grandma_generic")
 					elif len(postman.letters) == 4:
 						is_solved = true
+						postman.letters.append("retirement_form")
 						Dialogic.start("grandma_letters_found")
 					else:
 						Dialogic.start("grandma_letters_not_found")
