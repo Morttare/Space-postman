@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dinasir8kgc7n" path="res://Scenes/postman.tscn" id="1_p0y2u"]
 [ext_resource type="Script" path="res://Scenes/camera_2d.gd" id="2_isa5v"]
 [ext_resource type="Script" path="res://Scenes/grandma.gd" id="4_iu7xk"]
-[ext_resource type="Texture2D" uid="uid://bnyrccunyx65v" path="res://Sprites/icon.svg" id="4_r4cpi"]
+[ext_resource type="Texture2D" uid="uid://bnyrccunyx65v" path="res://Tiles/icon.svg" id="4_r4cpi"]
 [ext_resource type="PackedScene" uid="uid://dy8fota12a4gb" path="res://Scenes/broken_letter.tscn" id="5_oi0vk"]
 [ext_resource type="Texture2D" uid="uid://bqweoua68g0ro" path="res://Tiles/planet_0.png" id="7_03oko"]
 

@@ -27,17 +27,24 @@ func process_player_input():
 	var direction_vertical := Input.get_axis("move_up", "move_down")
 	handle_animations(direction_horizontal, direction_vertical)
 		
-	if direction_horizontal:
-		velocity.x = direction_horizontal * walk_speed
+		
+	if direction_horizontal and direction_vertical:
+		velocity.x = direction_horizontal * walk_speed * 0.7
+		velocity.y = direction_vertical * walk_speed * 0.7
+		
+	else:
+		if direction_horizontal:
+			velocity.x = direction_horizontal * walk_speed
+		
+		else:
+			velocity.x = move_toward(velocity.x, 0, walk_speed)
+			
+		if direction_vertical:
+			velocity.y = direction_vertical * walk_speed
+			
+		else:
+			velocity.y = move_toward(velocity.y, 0, walk_speed)
 	
-	else:
-		velocity.x = move_toward(velocity.x, 0, walk_speed)
-		
-	if direction_vertical:
-		velocity.y = direction_vertical * walk_speed
-		
-	else:
-		velocity.y = move_toward(velocity.y, 0, walk_speed)
 
 func handle_animations(direction_horizontal, direction_vertical):
 	if direction_horizontal > 0.0:
