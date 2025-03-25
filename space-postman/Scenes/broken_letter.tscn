@@ -23,7 +23,7 @@ offset_left = -65.0
 offset_top = 44.0
 offset_right = 70.0
 offset_bottom = 67.0
-text = "Press E to pick up"
+text = "Press Space to pick up"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://deifcmayqx1wp"]
+
+[ext_resource type="Texture2D" uid="uid://bnyrccunyx65v" path="res://Tiles/icon.svg" id="1_0fkwv"]
+[ext_resource type="Script" path="res://Scenes/spaceship.gd" id="1_22uo6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owc2d"]
+size = Vector2(214, 198)
+
+[node name="Spaceship" type="Area2D"]
+script = ExtResource("1_22uo6")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = ExtResource("1_0fkwv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_owc2d")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -69.0
+offset_top = 96.0
+offset_right = 92.0
+offset_bottom = 119.0
+text = "Press Space to travel"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,7 +1,6 @@
 extends Area2D
 
 var is_met = false
-var is_solved = false
 
 @onready var postman = get_node("/root/KnittedPlanet/Postman")
 
@@ -19,10 +18,10 @@ func _process(delta: float) -> void:
 					is_met = true
 					Dialogic.start("grandma_meet")
 				else:
-					if is_solved:
+					if Global.is_grandma_solved:
 						Dialogic.start("grandma_generic")
 					elif len(postman.letters) == 4:
-						is_solved = true
+						Global.is_grandma_solved = true
 						postman.letters.append("retirement_form")
 						Dialogic.start("grandma_letters_found")
 					else:
