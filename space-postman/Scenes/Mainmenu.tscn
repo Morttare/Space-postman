@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcukxrcdmxadk"]
+[gd_scene load_steps=8 format=3 uid="uid://dcukxrcdmxadk"]
 
 [ext_resource type="Script" path="res://mainmenu.gd" id="1_k5lm0"]
 [ext_resource type="Texture2D" uid="uid://doltjm23a4lax" path="res://Backgrounds/Background Main Menu.png" id="2_6d56h"]
 [ext_resource type="FontFile" uid="uid://b03iyj4stw5l7" path="res://Pixel Craft.ttf" id="3_wr8md"]
 [ext_resource type="AudioStream" uid="uid://chba50kxd1oru" path="res://Audio/Music and sounds/Space Postman Menu.wav" id="4_phjb5"]
 [ext_resource type="AudioStream" uid="uid://dorrq604r0j21" path="res://Audio/Music and sounds/SP Menu Playbutton v1.wav" id="5_nwp10"]
+[ext_resource type="Texture2D" uid="uid://ce04b7mxy13fg" path="res://Sprites/post_ship.png" id="6_m8va0"]
+
+[sub_resource type="Curve2D" id="Curve2D_5kwnh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 354.108, 328.561, 0, 0, 0, 0, 4772.77, 78.2285, 0, 0, 0, 0, 22062.5, -10310.6)
+}
+point_count = 3
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -47,3 +54,20 @@ autoplay = true
 
 [node name="SFX StartGame" type="AudioStreamPlayer2D" parent="MenuMusic"]
 stream = ExtResource("5_nwp10")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(144, 558)
+scale = Vector2(0.0649518, 0.063915)
+curve = SubResource("Curve2D_5kwnh")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(354.108, 328.561)
+rotation = -0.0565929
+scale = Vector2(15.396, 15.6458)
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-0.732224, -22.076)
+rotation = 0.0556914
+scale = Vector2(0.0649485, 0.0639183)
+skew = 0.00181758
+texture = ExtResource("6_m8va0")
