@@ -13,34 +13,6 @@ _data = {
 }
 point_count = 3
 
-[sub_resource type="Animation" id="Animation_hvi6w"]
-resource_name = "spaceshipmove"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.1687, 1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Path2D/PathFollow2D/Sprite2D:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2.96667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0.0649485, 0.0639183), Vector2(0.0649485, 0.0639183), Vector2(0.15, 0.147)]
-}
-
 [sub_resource type="Animation" id="Animation_2lhqo"]
 length = 0.001
 tracks/0/type = "value"
@@ -66,6 +38,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0.0649485, 0.0639183)]
+}
+
+[sub_resource type="Animation" id="Animation_hvi6w"]
+resource_name = "spaceshipmove"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.833333, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.1687, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.0649485, 0.0639183), Vector2(0.0649485, 0.0639183), Vector2(0.15, 0.147)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fa0m0"]

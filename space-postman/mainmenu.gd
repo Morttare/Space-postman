@@ -16,5 +16,5 @@ func _process(delta: float) -> void:
 		if justonce == 0:
 			$"MenuMusic/SFX StartGame".play()
 			justonce += 1
-		await get_tree().create_timer(4.5).timeout
+		await get_tree().create_timer(4).timeout
 		get_tree().change_scene_to_file.call_deferred("res://Scenes/knitted_planet.tscn")
