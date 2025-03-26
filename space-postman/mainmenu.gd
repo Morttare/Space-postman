@@ -9,4 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
-		get_tree().change_scene_to_file("res://Scenes/knitted_planet.tscn")
+		$MenuMusic.stop()
+		$"MenuMusic/SFX StartGame".play()
+		await get_tree().create_timer(5).timeout
+		get_tree().change_scene_to_file.call_deferred("res://Scenes/knitted_planet.tscn")

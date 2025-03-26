@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7u4g3jkajchv"
+path="res://.godot/imported/SP Prelude to knitted planet.wav-3e4105bde0e22f37b0af71bb2b92a77a.sample"
+
+[deps]
+
+source_file="res://Audio/Music and sounds/SP Prelude to knitted planet.wav"
+dest_files=["res://.godot/imported/SP Prelude to knitted planet.wav-3e4105bde0e22f37b0af71bb2b92a77a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
