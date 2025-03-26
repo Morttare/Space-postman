@@ -1,8 +1,5 @@
 extends Control
 
-# For the space ship launch animation
-@onready var pathfollow : PathFollow2D = $Path2D/PathFollow2D
-
 # Because some fools smash space again and again
 @onready var justonce = 0
 
@@ -15,9 +12,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		$MenuMusic.stop()
-		pathfollow.progress_ratio = 1
+		$AnimationPlayer.play("spaceshipmove")
 		if justonce == 0:
 			$"MenuMusic/SFX StartGame".play()
 			justonce += 1
-		await get_tree().create_timer(5).timeout
+		await get_tree().create_timer(4.5).timeout
 		get_tree().change_scene_to_file.call_deferred("res://Scenes/knitted_planet.tscn")
