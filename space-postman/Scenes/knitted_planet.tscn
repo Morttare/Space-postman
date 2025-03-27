@@ -72,6 +72,7 @@ script = ExtResource("2_isa5v")
 
 [node name="Grandma" type="Area2D" parent="."]
 script = ExtResource("4_iu7xk")
+auto_solve = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Grandma"]
 texture = ExtResource("4_r4cpi")
