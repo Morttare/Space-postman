@@ -15,7 +15,7 @@ var letters = []
 func _ready():
 	initial_position = position
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if is_moving == false and Dialogic.current_timeline == null:
 		process_player_input()
 		move_and_slide()

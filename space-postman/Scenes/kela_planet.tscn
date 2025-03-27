@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://mky1vnd54dbg"]
+[gd_scene load_steps=6 format=3 uid="uid://mky1vnd54dbg"]
 
 [ext_resource type="PackedScene" uid="uid://deifcmayqx1wp" path="res://Scenes/spaceship.tscn" id="1_3rit3"]
-[ext_resource type="Script" path="res://Scenes/kela_planet.gd" id="1_dkd6b"]
+[ext_resource type="Script" path="res://Scripts/kela_planet.gd" id="1_dkd6b"]
 [ext_resource type="PackedScene" uid="uid://dinasir8kgc7n" path="res://Scenes/postman.tscn" id="3_o2e6m"]
 [ext_resource type="AudioStream" uid="uid://c7dsqepxcrbwo" path="res://Audio/Music and sounds/SP Kela Planet v1.wav" id="4_6gepc"]
+[ext_resource type="Script" path="res://Scripts/camera_kela.gd" id="5_20pxe"]
 
 [node name="KelaPlanet" type="Node2D"]
 script = ExtResource("1_dkd6b")
@@ -17,3 +18,6 @@ position = Vector2(371, 335)
 [node name="KelaMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_6gepc")
 autoplay = true
+
+[node name="CameraKela" type="Camera2D" parent="."]
+script = ExtResource("5_20pxe")

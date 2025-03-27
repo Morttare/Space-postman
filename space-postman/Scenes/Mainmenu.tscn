@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dcukxrcdmxadk"]
 
-[ext_resource type="Script" path="res://mainmenu.gd" id="1_k5lm0"]
+[ext_resource type="Script" path="res://Scripts/mainmenu.gd" id="1_k5lm0"]
 [ext_resource type="Texture2D" uid="uid://doltjm23a4lax" path="res://Backgrounds/Background Main Menu.png" id="2_6d56h"]
 [ext_resource type="FontFile" uid="uid://b03iyj4stw5l7" path="res://Pixel Craft.ttf" id="3_wr8md"]
 [ext_resource type="AudioStream" uid="uid://chba50kxd1oru" path="res://Audio/Music and sounds/Space Postman Menu.wav" id="4_phjb5"]
