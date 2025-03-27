@@ -1,12 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://h8wsiccegn03"]
+[gd_scene load_steps=14 format=3 uid="uid://h8wsiccegn03"]
 
 [ext_resource type="PackedScene" uid="uid://dinasir8kgc7n" path="res://Scenes/postman.tscn" id="1_p0y2u"]
-[ext_resource type="Script" path="res://Scenes/camera_2d.gd" id="2_isa5v"]
-[ext_resource type="Script" path="res://Scenes/grandma.gd" id="4_iu7xk"]
-[ext_resource type="Texture2D" uid="uid://bnyrccunyx65v" path="res://Tiles/icon.svg" id="4_r4cpi"]
+[ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="2_isa5v"]
+[ext_resource type="Script" path="res://Scripts/grandma.gd" id="4_iu7xk"]
+[ext_resource type="Texture2D" uid="uid://cfdw5ux86yuxj" path="res://Sprites/grandma.png" id="4_v4gwf"]
 [ext_resource type="PackedScene" uid="uid://dy8fota12a4gb" path="res://Scenes/broken_letter.tscn" id="5_oi0vk"]
 [ext_resource type="PackedScene" uid="uid://deifcmayqx1wp" path="res://Scenes/spaceship.tscn" id="7_3kj5u"]
 [ext_resource type="Texture2D" uid="uid://bqweoua68g0ro" path="res://Tiles/planet_0.png" id="7_03oko"]
+[ext_resource type="AudioStream" uid="uid://0nrae6a0cydw" path="res://Audio/Music and sounds/SP Knitted Planet v1.wav" id="8_cv4wl"]
+[ext_resource type="AudioStream" uid="uid://vejv7k413s3f" path="res://Audio/Music and sounds/SP Knitting basket rummaging.wav" id="9_dieal"]
+[ext_resource type="AudioStream" uid="uid://cjnao6ybrdamn" path="res://Audio/Music and sounds/SP Letter delivery success.wav" id="10_d5mn7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y6p5m"]
 size = Vector2(173, 182)
@@ -64,6 +67,9 @@ sources/0 = SubResource("TileSetAtlasSource_inr5x")
 
 [node name="KnittedPlanet" type="Node2D"]
 
+[node name="Spaceship" parent="." instance=ExtResource("7_3kj5u")]
+position = Vector2(-848, 488)
+
 [node name="Postman" parent="." instance=ExtResource("1_p0y2u")]
 position = Vector2(134, 187)
 
@@ -75,7 +81,9 @@ script = ExtResource("4_iu7xk")
 auto_solve = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Grandma"]
-texture = ExtResource("4_r4cpi")
+position = Vector2(-1.49999, 1.49999)
+scale = Vector2(2.79688, 2.79688)
+texture = ExtResource("4_v4gwf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Grandma"]
 position = Vector2(1.5, -2)
@@ -112,8 +120,15 @@ layer_1/name = "Objects"
 layer_1/z_index = -10
 layer_1/tile_data = PackedInt32Array(-131062, 196608, 2, 327692, 262144, 2, -262130, 327680, 0, -196594, 327680, 1, -131058, 327680, 2, -262129, 393216, 0, -196593, 393216, 1, -131057, 393216, 2, 655348, 196608, 0, 655349, 262144, 0, 720884, 196608, 1, 720885, 262144, 1, 131070, 196608, 2, -458765, 196608, 0, -458764, 262144, 0, -393228, 262144, 1, -393229, 196608, 1, -1, 65536, 1, 65535, 65536, 1, -655370, 393216, 1, -720907, 327680, 0, -655371, 327680, 1, -589835, 327680, 2, -720906, 393216, 0, -589834, 393216, 2, 262151, 196608, 1, 262152, 262144, 1, 196616, 262144, 0, 196615, 196608, 0)
 
-[node name="Spaceship" parent="." instance=ExtResource("7_3kj5u")]
-position = Vector2(-791, 547)
+[node name="PlanetMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_cv4wl")
+autoplay = true
+
+[node name="PickUpItem" type="AudioStreamPlayer2D" parent="PlanetMusic"]
+stream = ExtResource("9_dieal")
+
+[node name="LetterDeliverySuccess" type="AudioStreamPlayer2D" parent="PlanetMusic"]
+stream = ExtResource("10_d5mn7")
 
 [connection signal="body_entered" from="Grandma" to="Grandma" method="_on_body_entered"]
 [connection signal="body_exited" from="Grandma" to="Grandma" method="_on_body_exited"]

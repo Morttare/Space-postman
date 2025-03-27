@@ -1,62 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://mky1vnd54dbg"]
+[gd_scene load_steps=6 format=3 uid="uid://mky1vnd54dbg"]
 
 [ext_resource type="PackedScene" uid="uid://deifcmayqx1wp" path="res://Scenes/spaceship.tscn" id="1_3rit3"]
-[ext_resource type="Script" path="res://Scenes/kela_planet.gd" id="1_dkd6b"]
+[ext_resource type="Script" path="res://Scripts/kela_planet.gd" id="1_dkd6b"]
 [ext_resource type="PackedScene" uid="uid://dinasir8kgc7n" path="res://Scenes/postman.tscn" id="3_o2e6m"]
-[ext_resource type="Script" path="res://Scenes/receptionist.gd" id="5_fp324"]
-[ext_resource type="Texture2D" uid="uid://bnyrccunyx65v" path="res://Tiles/icon.svg" id="6_g0wus"]
-[ext_resource type="PackedScene" uid="uid://6vb20pvot6v4" path="res://Scenes/person_with_queue_number_screen.tscn" id="6_pfc07"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nxhj"]
-size = Vector2(173, 182)
+[ext_resource type="AudioStream" uid="uid://c7dsqepxcrbwo" path="res://Audio/Music and sounds/SP Kela Planet v1.wav" id="4_6gepc"]
+[ext_resource type="Script" path="res://Scripts/camera_kela.gd" id="5_20pxe"]
 
 [node name="KelaPlanet" type="Node2D"]
 script = ExtResource("1_dkd6b")
 
 [node name="Spaceship" parent="." instance=ExtResource("1_3rit3")]
-position = Vector2(135, 152)
+position = Vector2(167, 152)
 
 [node name="Postman" parent="." instance=ExtResource("3_o2e6m")]
 position = Vector2(371, 335)
 
-[node name="Receptionist" type="Area2D" parent="."]
-position = Vector2(754, 117)
-script = ExtResource("5_fp324")
+[node name="KelaMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_6gepc")
+autoplay = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Receptionist"]
-texture = ExtResource("6_g0wus")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Receptionist"]
-position = Vector2(1.5, -2)
-shape = SubResource("RectangleShape2D_1nxhj")
-
-[node name="Label" type="Label" parent="Receptionist"]
-visible = false
-offset_left = -54.0
-offset_top = 73.0
-offset_right = 55.0
-offset_bottom = 96.0
-text = "Press Space to talk"
-
-[node name="Queue1" parent="." instance=ExtResource("6_pfc07")]
-position = Vector2(631, 593)
-modulo = 3
-number_change_time = 3.0
-
-[node name="Queue2" parent="." instance=ExtResource("6_pfc07")]
-position = Vector2(813, 587)
-modulo = 10
-number_change_time = 3.0
-
-[node name="Queue3" parent="." instance=ExtResource("6_pfc07")]
-position = Vector2(989, 581)
-modulo = 7
-number_change_time = 3.0
-
-[node name="Queue4" parent="." instance=ExtResource("6_pfc07")]
-position = Vector2(1175, 588)
-modulo = 2
-number_change_time = 3.0
-
-[connection signal="body_entered" from="Receptionist" to="Receptionist" method="_on_body_entered"]
-[connection signal="body_exited" from="Receptionist" to="Receptionist" method="_on_body_exited"]
+[node name="CameraKela" type="Camera2D" parent="."]
+script = ExtResource("5_20pxe")

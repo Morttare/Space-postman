@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dy8fota12a4gb"]
 
-[ext_resource type="Script" path="res://broken_letter.gd" id="1_gohvd"]
+[ext_resource type="Script" path="res://Scripts/broken_letter.gd" id="1_gohvd"]
 [ext_resource type="Texture2D" uid="uid://bnyrccunyx65v" path="res://Tiles/icon.svg" id="2_j2ow7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_arox2"]

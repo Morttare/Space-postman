@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cbu1jnvfpyx6d"
+path="res://.godot/imported/Grandma sound 18.wav-bdf2eec6108c37bf37ed92ac4c41e283.sample"
+
+[deps]
+
+source_file="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 18.wav"
+dest_files=["res://.godot/imported/Grandma sound 18.wav-bdf2eec6108c37bf37ed92ac4c41e283.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

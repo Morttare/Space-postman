@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c7dsqepxcrbwo"
+path="res://.godot/imported/SP Kela Planet v1.wav-c607a6ccbf1c1fd31f69176e7febe605.sample"
+
+[deps]
+
+source_file="res://Audio/Music and sounds/SP Kela Planet v1.wav"
+dest_files=["res://.godot/imported/SP Kela Planet v1.wav-c607a6ccbf1c1fd31f69176e7febe605.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
