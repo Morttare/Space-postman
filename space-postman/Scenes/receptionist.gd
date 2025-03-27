@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 			if Dialogic.current_timeline == null:
 				if not is_met:
 					is_met = true
+					Global.queue_number = 637
 					Dialogic.start("receptionist_meet")
 				else:
 					Dialogic.start("receptionist_meet")

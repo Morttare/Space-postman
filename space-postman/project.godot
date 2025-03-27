@@ -56,7 +56,9 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
-variables={}
+variables={
+"has_letter": false
+}
 layout/style_list=["res://Default_Style.tres"]
 layout/default_style="res://Default_Style.tres"
 glossary/default_case_sensitive=true

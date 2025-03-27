@@ -1,10 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://mky1vnd54dbg"]
+[gd_scene load_steps=12 format=3 uid="uid://mky1vnd54dbg"]
 
 [ext_resource type="PackedScene" uid="uid://deifcmayqx1wp" path="res://Scenes/spaceship.tscn" id="1_3rit3"]
 [ext_resource type="Script" path="res://Scripts/kela_planet.gd" id="1_dkd6b"]
 [ext_resource type="PackedScene" uid="uid://dinasir8kgc7n" path="res://Scenes/postman.tscn" id="3_o2e6m"]
 [ext_resource type="AudioStream" uid="uid://c7dsqepxcrbwo" path="res://Audio/Music and sounds/SP Kela Planet v1.wav" id="4_6gepc"]
 [ext_resource type="Script" path="res://Scripts/camera_kela.gd" id="5_20pxe"]
+[ext_resource type="AudioStream" uid="uid://cjnao6ybrdamn" path="res://Audio/Music and sounds/SP Letter delivery success.wav" id="5_q1csr"]
+[ext_resource type="AudioStream" uid="uid://bvbjvlguc6hup" path="res://Audio/Music and sounds/SP Letter delivery fail.wav" id="6_7yppe"]
+[ext_resource type="Script" path="res://Scripts/grandma.gd" id="6_i3wp2"]
+[ext_resource type="Texture2D" uid="uid://bnyrccunyx65v" path="res://icon.svg" id="7_yo1gs"]
+[ext_resource type="PackedScene" uid="uid://6vb20pvot6v4" path="res://Scenes/person_with_queue_number_screen.tscn" id="8_ccxhs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vor8s"]
+size = Vector2(173, 182)
 
 [node name="KelaPlanet" type="Node2D"]
 script = ExtResource("1_dkd6b")
@@ -19,5 +27,56 @@ position = Vector2(371, 335)
 stream = ExtResource("4_6gepc")
 autoplay = true
 
+[node name="LetterDeliverySuccess" type="AudioStreamPlayer2D" parent="KelaMusic"]
+stream = ExtResource("5_q1csr")
+
+[node name="LetterDeliveryFail" type="AudioStreamPlayer2D" parent="KelaMusic"]
+stream = ExtResource("6_7yppe")
+
 [node name="CameraKela" type="Camera2D" parent="."]
 script = ExtResource("5_20pxe")
+
+[node name="Receptionist" type="Area2D" parent="."]
+position = Vector2(713, 87)
+script = ExtResource("6_i3wp2")
+auto_solve = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Receptionist"]
+position = Vector2(-1.49999, 1.49999)
+texture = ExtResource("7_yo1gs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Receptionist"]
+position = Vector2(1.5, -2)
+shape = SubResource("RectangleShape2D_vor8s")
+
+[node name="Label" type="Label" parent="Receptionist"]
+visible = false
+offset_left = -54.0
+offset_top = 73.0
+offset_right = 55.0
+offset_bottom = 96.0
+text = "Press Space to talk"
+
+[node name="Queue1" parent="." instance=ExtResource("8_ccxhs")]
+position = Vector2(991, -247)
+modulo = 3
+
+[node name="Queue2" parent="." instance=ExtResource("8_ccxhs")]
+position = Vector2(1189, -250)
+modulo = 10
+
+[node name="Queue3" parent="." instance=ExtResource("8_ccxhs")]
+position = Vector2(1389, -252)
+modulo = 11
+
+[node name="Queue4" parent="." instance=ExtResource("8_ccxhs")]
+position = Vector2(1572, -248)
+is_correct_queue = true
+modulo = 7
+
+[node name="Queue5" parent="." instance=ExtResource("8_ccxhs")]
+position = Vector2(1774, -255)
+modulo = 5
+
+[connection signal="body_entered" from="Receptionist" to="Receptionist" method="_on_body_entered"]
+[connection signal="body_exited" from="Receptionist" to="Receptionist" method="_on_body_exited"]

@@ -9,7 +9,7 @@ var is_met = false
 func _ready() -> void:
 	if auto_solve:
 		is_met = true
-		postman.letters.append("retirement_form")
+		Global.letters.append("retirement_form")
 		Global.is_grandma_solved = true
 
 
@@ -24,9 +24,10 @@ func _process(_delta: float) -> void:
 				else:
 					if Global.is_grandma_solved:
 						Dialogic.start("grandma_generic")
-					elif len(postman.letters) == 4:
+					elif len(Global.letters) == 4:
 						Global.is_grandma_solved = true
-						postman.letters.append("retirement_form")
+						Global.letters.clear()
+						Global.letters.append("retirement_form")
 						Dialogic.start("grandma_letters_found")
 					else:
 						Dialogic.start("grandma_letters_not_found")

@@ -15,7 +15,7 @@ func _process(_delta: float) -> void:
 		$Sprite2D.visible = true
 	if Input.is_action_just_pressed("interact"):
 		if $Label.visible:
-			postman.letters.append(letter_name)
+			Global.letters.append(letter_name)
 			free()
 
 
