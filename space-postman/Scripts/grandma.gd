@@ -26,16 +26,18 @@ func _process(_delta: float) -> void:
 						Dialogic.start("grandma_generic")
 					elif len(Global.letters) == 4:
 						Global.is_grandma_solved = true
+						$Label.visible = false
 						Global.letters.clear()
 						Global.letters.append("retirement_form")
 						Dialogic.start("grandma_letters_found")
 					else:
-						Dialogic.start("grandma_letters_not_found")
+						Dialogic.start("grandma_puzzle_in_progress")
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Postman":
-		$Label.visible = true
+		if not Global.is_grandma_solved:
+			$Label.visible = true
 
 
 

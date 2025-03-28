@@ -1,13 +1,21 @@
 join Grandma center
 join Postman center
+[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 4.wav" volume="0.0"]
 Grandma: Hello, my love! Why don't you look fly in your post uniform! You know dear…
-Grandma: Delivering post is one of the most important jobs in the whole galaxy! 
+[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 14.wav" volume="0.0"]
+Grandma: Delivering post is one of the most important jobs in the whole galaxy!
+[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 16.wav" volume="0.0"]
 Grandma: And I have done more than my fair share of it! It is time to retire!
-Grandma: *rips a letter*
+[sound path="res://Audio/Music and sounds/SP Letter rip twice.wav" volume="0.0"]
+Grandma: *rips a letter in 4*
 Postman: Uuhhh…
 Postman: O_O
 Postman: Wasn't I suppose to deliver that?
+[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 16.wav" volume="0.0"]
 Grandma: My Yarn! You're right! I got too carried away…
-Grandma: Oops! It also looks like the parts of the letters got carried away by wind. 
-Grandma: Don't worry! They must be somewhere around here. 
-Grandma: Return to me when you have collected them and I can teach you all about postmanship. 
+[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 6.wav" volume="0.0"]
+Grandma: Oops! It also looks like the parts of the letters got carried away by wind.
+[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 7.wav" volume="0.0"]
+Grandma: Don't worry! They must be somewhere around here.
+[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 12.wav" volume="0.0"]
+Grandma: Return to me when you have collected them and I can teach you all about postmanship.
