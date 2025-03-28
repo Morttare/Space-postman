@@ -7,9 +7,9 @@
 [ext_resource type="Script" path="res://Scripts/camera_kela.gd" id="5_20pxe"]
 [ext_resource type="AudioStream" uid="uid://cjnao6ybrdamn" path="res://Audio/Music and sounds/SP Letter delivery success.wav" id="5_q1csr"]
 [ext_resource type="AudioStream" uid="uid://bvbjvlguc6hup" path="res://Audio/Music and sounds/SP Letter delivery fail.wav" id="6_7yppe"]
-[ext_resource type="Script" path="res://Scripts/grandma.gd" id="6_i3wp2"]
 [ext_resource type="Texture2D" uid="uid://bnyrccunyx65v" path="res://icon.svg" id="7_yo1gs"]
 [ext_resource type="PackedScene" uid="uid://6vb20pvot6v4" path="res://Scenes/person_with_queue_number_screen.tscn" id="8_ccxhs"]
+[ext_resource type="Script" path="res://Scenes/receptionist.gd" id="8_vcy22"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vor8s"]
 size = Vector2(173, 182)
@@ -29,17 +29,18 @@ autoplay = true
 
 [node name="LetterDeliverySuccess" type="AudioStreamPlayer2D" parent="KelaMusic"]
 stream = ExtResource("5_q1csr")
+volume_db = 10.0
 
 [node name="LetterDeliveryFail" type="AudioStreamPlayer2D" parent="KelaMusic"]
 stream = ExtResource("6_7yppe")
+volume_db = 15.0
 
 [node name="CameraKela" type="Camera2D" parent="."]
 script = ExtResource("5_20pxe")
 
 [node name="Receptionist" type="Area2D" parent="."]
 position = Vector2(713, 87)
-script = ExtResource("6_i3wp2")
-auto_solve = true
+script = ExtResource("8_vcy22")
 
 [node name="Sprite2D" type="Sprite2D" parent="Receptionist"]
 position = Vector2(-1.49999, 1.49999)

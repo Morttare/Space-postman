@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://er2fl1fr5eli"
-path="res://.godot/imported/Grandma Text Background.png-83592b3626bd0580653b97a777cf9194.ctex"
+uid="uid://gvbjxbinhvt7"
+path="res://.godot/imported/next.svg-bf7a9377fb5934411da01b9ac50fff25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Backgrounds/Grandma Text Background.png"
-dest_files=["res://.godot/imported/Grandma Text Background.png-83592b3626bd0580653b97a777cf9194.ctex"]
+source_file="res://Dialogic/GrandmaStyleTextbox/next.svg"
+dest_files=["res://.godot/imported/next.svg-bf7a9377fb5934411da01b9ac50fff25.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

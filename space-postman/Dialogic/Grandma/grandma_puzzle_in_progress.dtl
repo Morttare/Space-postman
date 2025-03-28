@@ -1,5 +1,10 @@
 join Grandma center
 join Postman center
+[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 1.wav" volume="0.0"]
 Grandma: Did you find all the pieces?
-Postman: Not yet...
-Grandma: Don't worry! They must be somewhere around here. 
+- Yes!
+	[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 8.wav" volume="0.0"]
+	Grandma: Oh honey… looks like some pieces are still missing.
+- Not yet...
+	[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 7.wav" volume="0.0"]
+	Grandma: Don't worry! They must be somewhere around here.

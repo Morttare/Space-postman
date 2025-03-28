@@ -18,6 +18,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		if $Label.visible:
 			if Dialogic.current_timeline == null:
+				Dialogic.timeline_ended.connect(_on_timeline_end)
 				if not is_met:
 					is_met = true
 					Dialogic.start("grandma_meet")
@@ -30,12 +31,17 @@ func _process(_delta: float) -> void:
 						Global.letters.append("retirement_form")
 						Dialogic.start("grandma_letters_found")
 					else:
-						Dialogic.start("grandma_letters_not_found")
+						Dialogic.start("grandma_puzzle_in_progress")
 
+
+func _on_timeline_end():
+	Dialogic.timeline_ended.disconnect(_on_timeline_end)
+	$Label.visible = false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Postman":
-		$Label.visible = true
+		if not Global.is_grandma_solved:
+			$Label.visible = true
 
 
 

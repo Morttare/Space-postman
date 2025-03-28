@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://er2fl1fr5eli"
-path="res://.godot/imported/Grandma Text Background.png-83592b3626bd0580653b97a777cf9194.ctex"
+uid="uid://2ufxo5sbm1tx"
+path="res://.godot/imported/ship_sprite.png-6f908494014e65fa682113f9b600f77c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Backgrounds/Grandma Text Background.png"
-dest_files=["res://.godot/imported/Grandma Text Background.png-83592b3626bd0580653b97a777cf9194.ctex"]
+source_file="res://Sprites/ship_sprite.png"
+dest_files=["res://.godot/imported/ship_sprite.png-6f908494014e65fa682113f9b600f77c.ctex"]
 
 [params]
 

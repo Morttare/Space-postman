@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gvbjxbinhvt7"
-path="res://.godot/imported/next.svg-d06a27f063e68cea998c90e52fd38308.ctex"
+uid="uid://m4gi1k1nhv7o"
+path="res://.godot/imported/letter_piece.png-4dc528382a38ac97523f2610a0796d26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VisualNovelTextbox/next.svg"
-dest_files=["res://.godot/imported/next.svg-d06a27f063e68cea998c90e52fd38308.ctex"]
+source_file="res://Sprites/letter_piece.png"
+dest_files=["res://.godot/imported/letter_piece.png-4dc528382a38ac97523f2610a0796d26.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

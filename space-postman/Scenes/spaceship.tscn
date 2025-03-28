@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://deifcmayqx1wp"]
 
 [ext_resource type="Script" path="res://Scripts/spaceship.gd" id="1_22uo6"]
-[ext_resource type="Texture2D" uid="uid://ce04b7mxy13fg" path="res://Sprites/post_ship.png" id="2_5lal2"]
+[ext_resource type="Texture2D" uid="uid://2ufxo5sbm1tx" path="res://Sprites/ship_sprite.png" id="2_qndnn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owc2d"]
 size = Vector2(264, 134)
@@ -10,13 +10,13 @@ size = Vector2(264, 134)
 script = ExtResource("1_22uo6")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(2.00002, -2)
-scale = Vector2(0.124103, 0.124103)
-texture = ExtResource("2_5lal2")
+position = Vector2(55, -22)
+scale = Vector2(3, 3)
+texture = ExtResource("2_qndnn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(72, 51)
+position = Vector2(72, -17)
 shape = SubResource("RectangleShape2D_owc2d")
 
 [node name="Label" type="Label" parent="."]
