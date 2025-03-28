@@ -1,0 +1,133 @@
+[gd_scene load_steps=7 format=3 uid="uid://cir3adf7x8dwb"]
+
+[ext_resource type="Texture2D" uid="uid://2ufxo5sbm1tx" path="res://Sprites/ship_sprite.png" id="1_jxtk6"]
+[ext_resource type="Script" path="res://Scenes/endinganimation.gd" id="2_qqj38"]
+
+[sub_resource type="Curve2D" id="Curve2D_tuhwu"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 179, 340, 0, 0, 0, 0, 186, 275, 0, 0, 0, 0, 221, 228, 0, 0, 0, 0, 259, 220, 0, 0, 0, 0, 311, 230, 0, 0, 0, 0, 331, 272, 0, 0, 0, 0, 321, 352, 0, 0, 0, 0, 279, 415, 0, 0, 0, 0, 211, 481, 0, 0, 0, 0, 197, 546, 0, 0, 0, 0, 225, 581, 0, 0, 0, 0, 301, 615, 0, 0, 0, 0, 361, 583, 0, 0, 0, 0, 360, 537, 0, 0, 0, 0, 313, 482, 0, 0, 0, 0, 246, 446, 0, 0, 0, 0, 182, 398, 0, 0, 0, 0, 179.049, 340.48)
+}
+point_count = 18
+
+[sub_resource type="Animation" id="Animation_7n464"]
+resource_name = "flying ship"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.33333, 1.83333, 5.03333, 6.36667, 7.23333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.58825, 1.75231, 1.79245, 1.34739, 1.22522]
+}
+
+[sub_resource type="Animation" id="Animation_vkrhx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.4101]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.58825]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p2kag"]
+_data = {
+"RESET": SubResource("Animation_vkrhx"),
+"flying ship": SubResource("Animation_7n464")
+}
+
+[node name="ending" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -12.0
+offset_top = -8.0
+offset_right = 1291.0
+offset_bottom = 735.0
+color = Color(0.0024185, 0, 0.140049, 1)
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(11.3908, 13.7483)
+rotation = -0.0995451
+scale = Vector2(0.944312, 0.932672)
+curve = SubResource("Curve2D_tuhwu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(201.671, 524.311)
+rotation = -1.46352
+progress = 557.676
+rotates = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-3.86993, 1.42249)
+rotation = 1.58825
+scale = Vector2(1.66406, 1.76875)
+texture = ExtResource("1_jxtk6")
+
+[node name="Endinganimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_p2kag")
+}
+script = ExtResource("2_qqj38")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 797.0
+offset_top = 232.0
+offset_right = 1058.0
+offset_bottom = 296.0
+rotation = -0.0133036
+theme_override_font_sizes/font_size = 39
+text = "You did great!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 672.0
+offset_top = 90.0
+offset_right = 1150.0
+offset_bottom = 260.0
+rotation = -0.0133036
+theme_override_font_sizes/font_size = 124
+text = "The End"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 663.0
+offset_top = 427.0
+offset_right = 1256.0
+offset_bottom = 597.0
+rotation = -0.0133036
+theme_override_font_sizes/font_size = 34
+text = "Made by Team Handsoff:
+(list of everyone with their job titles)"
