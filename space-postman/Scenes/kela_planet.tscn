@@ -29,9 +29,11 @@ autoplay = true
 
 [node name="LetterDeliverySuccess" type="AudioStreamPlayer2D" parent="KelaMusic"]
 stream = ExtResource("5_q1csr")
+volume_db = 10.0
 
 [node name="LetterDeliveryFail" type="AudioStreamPlayer2D" parent="KelaMusic"]
 stream = ExtResource("6_7yppe")
+volume_db = 15.0
 
 [node name="CameraKela" type="Camera2D" parent="."]
 script = ExtResource("5_20pxe")

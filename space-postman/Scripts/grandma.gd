@@ -35,6 +35,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_timeline_end():
+	Dialogic.timeline_ended.disconnect(_on_timeline_end)
 	$Label.visible = false
 
 func _on_body_entered(body: Node2D) -> void:
