@@ -23,7 +23,7 @@ func _on_timer_timeout() -> void:
 	number_label.text = str(new_number)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		if talk_label.visible:
 			if Dialogic.current_timeline == null:
@@ -43,6 +43,7 @@ func _on_dialogic_signal(argument : String):
 		if is_correct_queue and talk_label.visible and Global.queue_number != 0:
 			Global.letters.clear() # erase didn't work; clear() will cause problems with two letter
 			success_sound.play()
+			Global.is_kela_solved = true
 			print("Jippi jei!")
 		else:
 			fail_sound.play()

@@ -21,6 +21,7 @@ func _process(_delta: float) -> void:
 				Dialogic.timeline_ended.connect(_on_timeline_end)
 				if not is_met:
 					is_met = true
+					Dialogic.signal_event.connect(_on_dialogic_signal)
 					Dialogic.start("grandma_meet")
 				else:
 					if Global.is_grandma_solved:
@@ -32,6 +33,14 @@ func _process(_delta: float) -> void:
 						Dialogic.start("grandma_letters_found")
 					else:
 						Dialogic.start("grandma_puzzle_in_progress")
+
+func _on_dialogic_signal(argument : String):
+	if argument == "rip":
+		$"../Path2D/PathFollow2D/Piece1".visible = true
+		$"../Path2D/PathFollow2D/Piece2".visible = true
+		$"../Path2D/PathFollow2D/Piece3".visible = true
+		$"../Path2D/PathFollow2D/Piece4".visible = true
+		$"../AnimationPlayer".play("lettersflying")
 
 
 func _on_timeline_end():
@@ -48,3 +57,11 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "Postman":
 		$Label.visible = false
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "lettersflying":
+		$"../Path2D/PathFollow2D/Piece1".visible = false
+		$"../Path2D/PathFollow2D/Piece2".visible = false
+		$"../Path2D/PathFollow2D/Piece3".visible = false
+		$"../Path2D/PathFollow2D/Piece4".visible = false

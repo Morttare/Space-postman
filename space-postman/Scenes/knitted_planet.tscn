@@ -75,6 +75,69 @@ _data = {
 }
 point_count = 46
 
+[sub_resource type="Animation" id="Animation_a0e8q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/Piece1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Path2D/PathFollow2D/Piece2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-8.60431, 4.82342)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Path2D/PathFollow2D/Piece3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7.25403, 15.7859)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Path2D/PathFollow2D/Piece4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.73113, 14.6473)]
+}
+
 [sub_resource type="Animation" id="Animation_b82fe"]
 resource_name = "lettersflying"
 length = 2.0
@@ -137,69 +200,6 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(2.73113, 14.6473), Vector2(841.346, 762.528)]
-}
-
-[sub_resource type="Animation" id="Animation_a0e8q"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Path2D/PathFollow2D/Piece1:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Path2D/PathFollow2D/Piece2:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-8.60431, 4.82342)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Path2D/PathFollow2D/Piece3:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-7.25403, 15.7859)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Path2D/PathFollow2D/Piece4:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2.73113, 14.6473)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h7d4v"]
@@ -308,20 +308,24 @@ position = Vector2(-2, 9)
 rotation = -2.97644
 
 [node name="Piece1" type="Sprite2D" parent="Path2D/PathFollow2D"]
+visible = false
 z_index = 1
 texture = ExtResource("12_5hi7u")
 
 [node name="Piece2" type="Sprite2D" parent="Path2D/PathFollow2D"]
+visible = false
 z_index = 1
 position = Vector2(-8.60431, 4.82342)
 texture = ExtResource("12_5hi7u")
 
 [node name="Piece3" type="Sprite2D" parent="Path2D/PathFollow2D"]
+visible = false
 z_index = 1
 position = Vector2(-7.25403, 15.7859)
 texture = ExtResource("12_5hi7u")
 
 [node name="Piece4" type="Sprite2D" parent="Path2D/PathFollow2D"]
+visible = false
 z_index = 1
 position = Vector2(2.73113, 14.6473)
 texture = ExtResource("12_5hi7u")
@@ -333,3 +337,4 @@ libraries = {
 
 [connection signal="body_entered" from="Grandma" to="Grandma" method="_on_body_entered"]
 [connection signal="body_exited" from="Grandma" to="Grandma" method="_on_body_exited"]
+[connection signal="animation_finished" from="AnimationPlayer" to="Grandma" method="_on_animation_player_animation_finished"]

@@ -9,7 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://bvbjvlguc6hup" path="res://Audio/Music and sounds/SP Letter delivery fail.wav" id="6_7yppe"]
 [ext_resource type="Texture2D" uid="uid://bnyrccunyx65v" path="res://icon.svg" id="7_yo1gs"]
 [ext_resource type="PackedScene" uid="uid://6vb20pvot6v4" path="res://Scenes/person_with_queue_number_screen.tscn" id="8_ccxhs"]
-[ext_resource type="Script" path="res://Scenes/receptionist.gd" id="8_vcy22"]
+[ext_resource type="Script" path="res://Scripts/receptionist.gd" id="8_vcy22"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vor8s"]
 size = Vector2(173, 182)
