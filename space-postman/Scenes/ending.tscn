@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cir3adf7x8dwb"]
+[gd_scene load_steps=11 format=3 uid="uid://cir3adf7x8dwb"]
 
 [ext_resource type="Texture2D" uid="uid://2ufxo5sbm1tx" path="res://Sprites/ship_sprite.png" id="1_jxtk6"]
 [ext_resource type="Script" path="res://Scripts/endinganimation.gd" id="2_qqj38"]
 [ext_resource type="AudioStream" uid="uid://bv8fxrqrjaro5" path="res://Audio/SP Credits scene.wav" id="3_xos7p"]
+[ext_resource type="Texture2D" uid="uid://q4eladyvs8pk" path="res://Sprites/Flyingstar.png" id="4_st8o3"]
 
 [sub_resource type="Curve2D" id="Curve2D_tuhwu"]
 _data = {
@@ -36,6 +37,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [1.58825]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Stars/Passingby:progress_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_7n464"]
 resource_name = "flying ship"
@@ -65,16 +78,53 @@ tracks/1/keys = {
 "update": 0,
 "values": [1.58825, 1.75231, 1.79245, 1.34739, 1.22522]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Stars/Passingby:progress_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_mngne"]
+resource_name = "starshine"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stars/Passingby:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p2kag"]
 _data = {
 "RESET": SubResource("Animation_vkrhx"),
-"flying ship": SubResource("Animation_7n464")
+"flying ship": SubResource("Animation_7n464"),
+"starshine": SubResource("Animation_mngne")
 }
+
+[sub_resource type="Curve2D" id="Curve2D_uwh2b"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 7989, 388, 0, 0, 0, 0, -5170, 350)
+}
+point_count = 2
 
 [node name="ending" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
 offset_left = -12.0
 offset_top = -8.0
 offset_right = 1291.0
@@ -103,6 +153,7 @@ texture = ExtResource("1_jxtk6")
 libraries = {
 "": SubResource("AnimationLibrary_p2kag")
 }
+autoplay = "flying ship"
 script = ExtResource("2_qqj38")
 
 [node name="Label" type="Label" parent="."]
@@ -136,3 +187,166 @@ text = "Made by Team Handsoff:
 [node name="Endingmusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_xos7p")
 autoplay = true
+
+[node name="Stars" type="Path2D" parent="."]
+z_index = -1
+curve = SubResource("Curve2D_uwh2b")
+
+[node name="Passingby" type="PathFollow2D" parent="Stars"]
+position = Vector2(7989, 388)
+rotation = -3.13871
+
+[node name="Star" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(-129.583, -57.7083)
+rotation = 3.13393
+texture = ExtResource("4_st8o3")
+
+[node name="Star2" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(84.4871, -151.852)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star3" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(185.64, 63.1485)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star4" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(518.653, 162.826)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star5" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(582.462, -156.827)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star6" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(674.116, 8.26553)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star7" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(674.116, 8.26553)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star8" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(959.803, -124.595)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star9" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(1474.16, -291.742)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star10" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(1313.5, 243.889)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star11" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(1910.92, 282.923)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star12" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(1707.31, 122.949)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star13" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(2135.42, -168.343)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star14" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(2309.82, 170.932)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star15" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(2902.12, 98.0107)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star16" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(3366.81, -135.644)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star26" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(3889.65, -127.232)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star27" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(4642.14, 41.5954)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star28" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(5375.65, 215.478)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star29" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(5959.56, -162.21)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star30" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(6413.36, 115.481)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star17" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(-533.115, 91.3307)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star18" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(-1106.56, -50.9472)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star19" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(-1649.52, 156.488)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star20" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(-1847.81, -171.548)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star21" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(-2477.49, 63.7549)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star22" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(-2841.4, -25.6138)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star23" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(-3654.07, 11.5072)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star25" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(-4519.53, -30.8484)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star31" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(-5030.78, 82.5274)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
+
+[node name="Star24" type="Sprite2D" parent="Stars/Passingby"]
+position = Vector2(-3873.28, 191.706)
+rotation = 3.14654
+texture = ExtResource("4_st8o3")
