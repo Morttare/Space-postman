@@ -148,7 +148,7 @@ tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
+"times": PackedFloat32Array(0, 1.26667, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, 0.333333, 1.0]
@@ -304,9 +304,8 @@ rotation = -1.52273
 curve = SubResource("Curve2D_e41oe")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(-18.8164, 178.806)
-rotation = 3.05294
-progress = 1697.95
+position = Vector2(-2, 9)
+rotation = -2.97644
 
 [node name="Piece1" type="Sprite2D" parent="Path2D/PathFollow2D"]
 visible = false
