@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cir3adf7x8dwb"]
+[gd_scene load_steps=8 format=3 uid="uid://cir3adf7x8dwb"]
 
 [ext_resource type="Texture2D" uid="uid://2ufxo5sbm1tx" path="res://Sprites/ship_sprite.png" id="1_jxtk6"]
 [ext_resource type="Script" path="res://Scripts/endinganimation.gd" id="2_qqj38"]
+[ext_resource type="AudioStream" uid="uid://bv8fxrqrjaro5" path="res://Audio/SP Credits scene.wav" id="3_xos7p"]
 
 [sub_resource type="Curve2D" id="Curve2D_tuhwu"]
 _data = {
@@ -131,3 +132,7 @@ rotation = -0.0133036
 theme_override_font_sizes/font_size = 34
 text = "Made by Team Handsoff:
 (list of everyone with their job titles)"
+
+[node name="Endingmusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xos7p")
+autoplay = true
