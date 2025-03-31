@@ -148,10 +148,10 @@ tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [0.0, 0.333333, 1.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -172,7 +172,7 @@ tracks/2/path = NodePath("Path2D/PathFollow2D/Piece2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.6),
+"times": PackedFloat32Array(0, 1.96667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-8.60431, 4.82342), Vector2(172.891, -1542.78)]
@@ -184,7 +184,7 @@ tracks/3/path = NodePath("Path2D/PathFollow2D/Piece3:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.6),
+"times": PackedFloat32Array(0, 1.96667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-7.25403, 15.7859), Vector2(-173.763, 1970.19)]
@@ -196,7 +196,7 @@ tracks/4/path = NodePath("Path2D/PathFollow2D/Piece4:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.6),
+"times": PackedFloat32Array(0, 1.96667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(2.73113, 14.6473), Vector2(841.346, 762.528)]
@@ -304,8 +304,9 @@ rotation = -1.52273
 curve = SubResource("Curve2D_e41oe")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(-2, 9)
-rotation = -2.97644
+position = Vector2(-18.8164, 178.806)
+rotation = 3.05294
+progress = 1697.95
 
 [node name="Piece1" type="Sprite2D" parent="Path2D/PathFollow2D"]
 visible = false
