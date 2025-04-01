@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Dialogic/GrandmaStyleTextbox/vn_textbox_layer.gd" id="1_tlt6s"]
 [ext_resource type="Script" path="res://Dialogic/GrandmaStyleTextbox/animations.gd" id="2_cwp5q"]
 [ext_resource type="StyleBox" uid="uid://dkv1pl1c1dq6" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres" id="3_jr0s4"]
-[ext_resource type="Texture2D" uid="uid://dreos0qfrae6c" path="res://Backgrounds/Kela Text Background.png" id="4_t4aqy"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="5_550wg"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="6_rb2d1"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="7_8yqod"]
@@ -201,6 +200,9 @@ _data = {
 "textbox_pop": SubResource("Animation_htbgc")
 }
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r40yn"]
+load_path = "res://.godot/imported/Kela Text Background.png-9e5be31d9cffddb269c1802ecf404990.ctex"
+
 [sub_resource type="FontVariation" id="FontVariation_v8y64"]
 
 [node name="VN_TextboxLayer" type="Control"]
@@ -280,7 +282,7 @@ metadata/_edit_layout_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="Anchor/AnimationParent/Sizer/DialogTextPanel"]
 layout_mode = 2
-texture = ExtResource("4_t4aqy")
+texture = SubResource("CompressedTexture2D_r40yn")
 expand_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel"]

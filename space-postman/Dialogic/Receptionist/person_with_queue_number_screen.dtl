@@ -3,12 +3,12 @@ join Postman_in_kela center
 Officer: How can I help you?
 - [Give letter] | [if {has_letter} == true] [else="hide"]
 	Postman_in_kela: What if this is the wrong desk? Should I really give it?
-	- yes
-		[signal arg="gave_letter"]
-	- maybe
-		[end_timeline]
 	- no
 		[end_timeline]
+	- maybe
+		[end_timeline]
+	- yes
+		[signal arg="gave_letter"]
 - Ask something
 	Officer: Yes yes very good question
 	[end_timeline]
