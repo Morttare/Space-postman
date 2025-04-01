@@ -12,12 +12,14 @@ extends Area2D
 @onready var success_sound = get_node("/root/KelaPlanet/KelaMusic/LetterDeliverySuccess")
 @onready var fail_sound = get_node("/root/KelaPlanet/KelaMusic/LetterDeliveryFail")
 
+var max_number = 1000
+
 
 func _ready() -> void:
 	timer.wait_time = number_change_time
 	
 func _on_timer_timeout() -> void:
-	var new_number = floor((randi() % 1000)/modulo)*modulo
+	var new_number = floor((randi() % max_number)/modulo)*modulo
 	if new_number == 0 or new_number == Global.queue_number:
 		new_number += 1
 	number_label.text = str(new_number)
