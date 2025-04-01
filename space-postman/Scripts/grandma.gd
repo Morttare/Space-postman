@@ -25,7 +25,8 @@ func _process(_delta: float) -> void:
 					Dialogic.start("grandma_meet")
 				else:
 					if Global.is_grandma_solved:
-						Dialogic.start("grandma_generic")
+						#Dialogic.start("grandma_generic")
+						pass
 					elif len(Global.letters) == 4:
 						Global.is_grandma_solved = true
 						Global.letters.clear()
