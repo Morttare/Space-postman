@@ -446,8 +446,7 @@ modulo = 11
 
 [node name="Queue3" parent="Queuing place11" instance=ExtResource("8_ccxhs")]
 position = Vector2(2548, -686)
-is_correct_queue = true
-modulo = 7
+modulo = 15
 
 [node name="Queue4" parent="Queuing place11" instance=ExtResource("8_ccxhs")]
 position = Vector2(2692, -686)
@@ -455,7 +454,8 @@ modulo = 3
 
 [node name="Queue5" parent="Queuing place11" instance=ExtResource("8_ccxhs")]
 position = Vector2(3268, -686)
-modulo = 6
+is_correct_queue = true
+modulo = 7
 
 [node name="Queue6" parent="Queuing place11" instance=ExtResource("8_ccxhs")]
 position = Vector2(3412, -686)
