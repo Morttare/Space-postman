@@ -23,7 +23,9 @@ Global="*res://Scripts/Global.gd"
 [dialogic]
 
 directories/dch_directory={
+"Administrator": "res://Dialogic/Administrator.dch",
 "Grandma": "res://Dialogic/Grandma/Grandma.dch",
+"Lost_Person": "res://Dialogic/Lost_Person.dch",
 "Officer": "res://Dialogic/Receptionist/Officer.dch",
 "Postman": "res://Dialogic/Grandma/Postman.dch",
 "Postman_in_kela": "res://Dialogic/Postman_in_kela.dch",
@@ -31,11 +33,15 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "correct_queue": "res://Dialogic/Queue/correct_queue.dtl",
+"final_dialogue": "res://Dialogic/final_dialogue.dtl",
 "grandma_generic": "res://Dialogic/Grandma/grandma_generic.dtl",
 "grandma_letters_found": "res://Dialogic/Grandma/grandma_letters_found.dtl",
 "grandma_meet": "res://Dialogic/Grandma/grandma_meet.dtl",
 "grandma_puzzle_in_progress": "res://Dialogic/Grandma/grandma_puzzle_in_progress.dtl",
+"lost_person_again": "res://Audio/Music and sounds/lost_person_again.dtl",
+"lost_person_meet": "res://Dialogic/lost_person_meet.dtl",
 "person_with_queue_number_screen": "res://Dialogic/Queue/person_with_queue_number_screen.dtl",
+"receptionist_again": "res://Dialogic/Receptionist/receptionist_again.dtl",
 "receptionist_meet": "res://Dialogic/Receptionist/receptionist_meet.dtl",
 "wrong_queue": "res://Dialogic/Queue/wrong_queue.dtl"
 }

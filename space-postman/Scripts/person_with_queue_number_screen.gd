@@ -44,34 +44,36 @@ func update_screen(number : int):
 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		if talk_label.visible:
 			if Dialogic.current_timeline == null:
 				Dialogic.VAR.has_letter = "retirement_form" in Global.letters
 				print(Dialogic.VAR.has_letter)
-				Dialogic.signal_event.connect(_on_dialogic_signal)
+				#Dialogic.signal_event.connect(_on_dialogic_signal)
 				Dialogic.timeline_ended.connect(_on_timeline_ended)
-				Dialogic.start("person_with_queue_number_screen")
+				if is_correct_queue:
+					Dialogic.start("correct_queue")
+				else:
+					Dialogic.start("wrong_queue")
 
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
-	Dialogic.signal_event.disconnect(_on_dialogic_signal)
+	#Dialogic.signal_event.disconnect(_on_dialogic_signal)
 	talk_label.visible = false
 
-func _on_dialogic_signal(argument : String):
-	if argument == "gave_letter":
-		if is_correct_queue and talk_label.visible and Global.queue_number != 0:
-			Global.letters.clear() # erase didn't work; clear() will cause problems with two letter
-			success_sound.play()
-			Global.is_kela_solved = true
-			print("Jippi jei!")
-			Dialogic.start("correct_queue")
-		else:
-			fail_sound.play()
-			print("ähäkutti!")
-			Dialogic.start("wrong_queue")
+#func _on_dialogic_signal(argument : String):
+	#if argument == "gave_letter":
+		#if is_correct_queue and talk_label.visible and Global.queue_number != 0:
+			#Global.letters.clear() # erase didn't work; clear() will cause problems with two letter
+			#success_sound.play()
+			#Global.is_kela_solved = true
+			#print("Jippi jei!")
+			#Dialogic.start("correct_queue")
+		#else:
+			#fail_sound.play()
+			#print("ähäkutti!")
+			#Dialogic.start("wrong_queue")
 
 
 func _on_body_entered(body: Node2D) -> void:
