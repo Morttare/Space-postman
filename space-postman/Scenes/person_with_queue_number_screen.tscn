@@ -1,45 +1,66 @@
-[gd_scene load_steps=4 format=3 uid="uid://6vb20pvot6v4"]
+[gd_scene load_steps=6 format=3 uid="uid://6vb20pvot6v4"]
 
 [ext_resource type="Script" path="res://Scripts/person_with_queue_number_screen.gd" id="1_g1jjo"]
 [ext_resource type="Texture2D" uid="uid://bnyrccunyx65v" path="res://icon.svg" id="2_8yaui"]
+[ext_resource type="Texture2D" uid="uid://ch8h44f7o33hx" path="res://Sprites/digits.png" id="3_m2xqi"]
+[ext_resource type="FontFile" uid="uid://b03iyj4stw5l7" path="res://Pixel Craft.ttf" id="4_vcwaj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5ai2"]
-size = Vector2(139, 135)
+size = Vector2(168, 217)
 
 [node name="Person with queue number screen" type="Area2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_g1jjo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_8yaui")
 
 [node name="Number screen" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Number screen"]
-modulate = Color(0.362829, 0.362829, 0.362829, 1)
+modulate = Color(0, 0, 0, 1)
 position = Vector2(1, -95)
-scale = Vector2(0.6875, 0.34375)
+scale = Vector2(0.45, 0.3)
 texture = ExtResource("2_8yaui")
 
 [node name="Label" type="Label" parent="Number screen"]
+visible = false
 offset_left = -14.0
 offset_top = -107.0
 offset_right = 26.0
 offset_bottom = -84.0
 text = "123"
 
+[node name="DigitTens" type="Sprite2D" parent="Number screen"]
+position = Vector2(-13, -95)
+scale = Vector2(5, 5)
+texture = ExtResource("3_m2xqi")
+hframes = 10
+frame = 9
+
+[node name="DigitUnits" type="Sprite2D" parent="Number screen"]
+position = Vector2(13, -95)
+scale = Vector2(5, 5)
+texture = ExtResource("3_m2xqi")
+hframes = 10
+frame = 9
+
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, 2.5)
+position = Vector2(0, 43.5)
 shape = SubResource("RectangleShape2D_i5ai2")
 
 [node name="Label" type="Label" parent="."]
-visible = false
-offset_left = -63.0
-offset_top = 81.0
-offset_right = 82.0
-offset_bottom = 104.0
+z_index = 5
+offset_left = -132.0
+offset_top = 130.0
+offset_right = 131.0
+offset_bottom = 177.0
+theme_override_fonts/font = ExtResource("4_vcwaj")
+theme_override_font_sizes/font_size = 25
 text = "Press Space to talk"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

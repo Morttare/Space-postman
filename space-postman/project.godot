@@ -30,12 +30,14 @@ directories/dch_directory={
 "Receptionist": "res://Dialogic/Receptionist/Receptionist.dch"
 }
 directories/dtl_directory={
+"correct_queue": "res://Dialogic/Queue/correct_queue.dtl",
 "grandma_generic": "res://Dialogic/Grandma/grandma_generic.dtl",
 "grandma_letters_found": "res://Dialogic/Grandma/grandma_letters_found.dtl",
 "grandma_meet": "res://Dialogic/Grandma/grandma_meet.dtl",
 "grandma_puzzle_in_progress": "res://Dialogic/Grandma/grandma_puzzle_in_progress.dtl",
-"person_with_queue_number_screen": "res://Dialogic/Receptionist/person_with_queue_number_screen.dtl",
-"receptionist_meet": "res://Dialogic/Receptionist/receptionist_meet.dtl"
+"person_with_queue_number_screen": "res://Dialogic/Queue/person_with_queue_number_screen.dtl",
+"receptionist_meet": "res://Dialogic/Receptionist/receptionist_meet.dtl",
+"wrong_queue": "res://Dialogic/Queue/wrong_queue.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
