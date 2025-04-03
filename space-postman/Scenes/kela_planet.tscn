@@ -152,17 +152,19 @@ scale = Vector2(0.75, 0.75)
 position = Vector2(297, 226)
 scale = Vector2(0.75, 0.75)
 
-[node name="KelaMusic" type="AudioStreamPlayer2D" parent="."]
+[node name="KelaMusic" type="AudioStreamPlayer2D" parent="Postman"]
+position = Vector2(-396, -301.333)
+scale = Vector2(1.33333, 1.33333)
 stream = ExtResource("4_6gepc")
 autoplay = true
 
-[node name="LetterDeliverySuccess" type="AudioStreamPlayer2D" parent="KelaMusic"]
+[node name="LetterDeliverySuccess" type="AudioStreamPlayer2D" parent="Postman/KelaMusic"]
 stream = ExtResource("5_q1csr")
 volume_db = 10.0
 
-[node name="LetterDeliveryFail" type="AudioStreamPlayer2D" parent="KelaMusic"]
+[node name="LetterDeliveryFail" type="AudioStreamPlayer2D" parent="Postman/KelaMusic"]
 stream = ExtResource("6_7yppe")
-volume_db = 15.0
+volume_db = 24.0
 
 [node name="CameraKela" type="Camera2D" parent="."]
 script = ExtResource("5_20pxe")

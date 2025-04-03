@@ -11,8 +11,8 @@ extends Area2D
 @onready var tensdigit = $"Number screen/DigitTens"
 @onready var unitsdigit = $"Number screen/DigitUnits"
 
-@onready var success_sound = get_node("/root/KelaPlanet/KelaMusic/LetterDeliverySuccess")
-@onready var fail_sound = get_node("/root/KelaPlanet/KelaMusic/LetterDeliveryFail")
+@onready var success_sound = get_node("/root/KelaPlanet/Postman/KelaMusic/LetterDeliverySuccess")
+@onready var fail_sound = get_node("/root/KelaPlanet/Postman/KelaMusic/LetterDeliveryFail")
 
 var max_number = 100
 
