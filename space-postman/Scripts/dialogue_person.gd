@@ -4,6 +4,7 @@ var is_met = false
 
 @export var first_dialogue_timeline : String
 @export var other_dialogue_timeline : String
+@export var is_final_dialogue : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,6 +24,9 @@ func _process(_delta: float) -> void:
 
 func _on_timeline_ended():
 	$Label.visible = false
+	if is_final_dialogue:
+		get_tree().change_scene_to_file.call_deferred("res://Scenes/ending.tscn")
+
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Postman":

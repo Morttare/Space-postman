@@ -38,7 +38,7 @@ directories/dtl_directory={
 "grandma_letters_found": "res://Dialogic/Grandma/grandma_letters_found.dtl",
 "grandma_meet": "res://Dialogic/Grandma/grandma_meet.dtl",
 "grandma_puzzle_in_progress": "res://Dialogic/Grandma/grandma_puzzle_in_progress.dtl",
-"lost_person_again": "res://Audio/Music and sounds/lost_person_again.dtl",
+"lost_person_again": "res://Dialogic/lost_person_again.dtl",
 "lost_person_meet": "res://Dialogic/lost_person_meet.dtl",
 "person_with_queue_number_screen": "res://Dialogic/Queue/person_with_queue_number_screen.dtl",
 "receptionist_again": "res://Dialogic/Receptionist/receptionist_again.dtl",
