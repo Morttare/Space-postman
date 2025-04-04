@@ -153,7 +153,6 @@ layer_1/y_sort_enabled = true
 
 [node name="Spaceship" parent="." instance=ExtResource("1_3rit3")]
 position = Vector2(-194, 79)
-scale = Vector2(0.75, 0.75)
 
 [node name="Postman" parent="." instance=ExtResource("3_o2e6m")]
 position = Vector2(-44, 174)
