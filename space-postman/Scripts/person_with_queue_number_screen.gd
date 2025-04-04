@@ -53,6 +53,7 @@ func _process(_delta: float) -> void:
 				#Dialogic.signal_event.connect(_on_dialogic_signal)
 				Dialogic.timeline_ended.connect(_on_timeline_ended)
 				if is_correct_queue:
+					Global.is_kela_solved = true
 					Dialogic.start("correct_queue")
 				else:
 					Dialogic.start("wrong_queue")

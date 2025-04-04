@@ -22,7 +22,8 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Postman":
-		$Label.visible = true
+		if Global.is_kela_solved:
+			$Label.visible = true
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "Postman":
