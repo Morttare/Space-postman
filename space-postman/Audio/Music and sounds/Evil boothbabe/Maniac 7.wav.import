@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c5jpi3h7ra8al"
+path="res://.godot/imported/Maniac 7.wav-fb66f24975a5e520af6c713db1dd4085.sample"
+
+[deps]
+
+source_file="res://Audio/Music and sounds/Evil boothbabe/Maniac 7.wav"
+dest_files=["res://.godot/imported/Maniac 7.wav-fb66f24975a5e520af6c713db1dd4085.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

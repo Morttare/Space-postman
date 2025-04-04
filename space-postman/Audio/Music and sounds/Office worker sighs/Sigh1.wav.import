@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dpbx1a0xvpmmp"
+path="res://.godot/imported/Sigh1.wav-6601834e693dd9aeb455ba97deb3adfc.sample"
+
+[deps]
+
+source_file="res://Audio/Music and sounds/Office worker sighs/Sigh1.wav"
+dest_files=["res://.godot/imported/Sigh1.wav-6601834e693dd9aeb455ba97deb3adfc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

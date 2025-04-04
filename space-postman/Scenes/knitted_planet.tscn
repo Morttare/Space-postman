@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://h8wsiccegn03"]
+[gd_scene load_steps=24 format=3 uid="uid://h8wsiccegn03"]
 
 [ext_resource type="PackedScene" uid="uid://dinasir8kgc7n" path="res://Scenes/postman.tscn" id="1_p0y2u"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="2_isa5v"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://cjnao6ybrdamn" path="res://Audio/Music and sounds/SP Letter delivery success.wav" id="10_d5mn7"]
 [ext_resource type="Script" path="res://Scripts/planet_music.gd" id="10_wtbce"]
 [ext_resource type="Texture2D" uid="uid://df8a7341tleie" path="res://Sprites/planet_0_hut.png" id="11_f5sci"]
+[ext_resource type="AudioStream" uid="uid://b4rlyipj1f32" path="res://Audio/Music and sounds/SP Letters whoosh.wav" id="12_02dyk"]
 [ext_resource type="Texture2D" uid="uid://m4gi1k1nhv7o" path="res://Sprites/letter_piece.png" id="12_5hi7u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_inr5x"]
@@ -282,6 +283,9 @@ stream = ExtResource("9_dieal")
 
 [node name="LetterDeliverySuccess" type="AudioStreamPlayer2D" parent="PlanetMusic"]
 stream = ExtResource("10_d5mn7")
+
+[node name="LettersSwoosh" type="AudioStreamPlayer2D" parent="PlanetMusic"]
+stream = ExtResource("12_02dyk")
 
 [node name="House" type="StaticBody2D" parent="."]
 position = Vector2(-203.828, -124.625)
