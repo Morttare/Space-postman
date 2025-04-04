@@ -140,7 +140,7 @@ scale = Vector2(0.944312, 0.932672)
 curve = SubResource("Curve2D_tuhwu")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(253.349, 439.897)
+position = Vector2(253.349, 439.896)
 rotation = -1.46352
 progress = 454.377
 rotates = false
@@ -177,14 +177,20 @@ theme_override_font_sizes/font_size = 124
 text = "The End"
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 663.0
-offset_top = 427.0
-offset_right = 1256.0
-offset_bottom = 597.0
-rotation = -0.0133036
-theme_override_font_sizes/font_size = 34
+offset_left = 652.0
+offset_top = 339.0
+offset_right = 1245.0
+offset_bottom = 669.0
+theme_override_font_sizes/font_size = 24
 text = "Made by Team Handsoff:
-(list of everyone with their job titles)"
+Producer: Susa Mattila 
+Assistant producer: Kari Söderqvist 
+Narrative design: Kaide Karri 
+Level design: Terho Thorel 
+Programming: Max Jauhiainen, Terho Thorel
+Graphic design: Kasper Ojuva , Camilo Alvarez 
+Audio design: Kari Söderqvist 
+Animation: Kari Söderqvist "
 
 [node name="Endingmusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_xos7p")
