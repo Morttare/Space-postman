@@ -61,6 +61,7 @@ func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
 	#Dialogic.signal_event.disconnect(_on_dialogic_signal)
 	talk_label.visible = false
+	print("rueoihgrg")
 
 #func _on_dialogic_signal(argument : String):
 	#if argument == "gave_letter":

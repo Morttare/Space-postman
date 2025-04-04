@@ -23,6 +23,7 @@ func _process(_delta: float) -> void:
 					Dialogic.start(other_dialogue_timeline)
 
 func _on_timeline_ended():
+	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
 	$Label.visible = false
 	if is_final_dialogue:
 		get_tree().change_scene_to_file.call_deferred("res://Scenes/ending.tscn")
