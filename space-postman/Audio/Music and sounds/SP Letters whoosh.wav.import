@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b4rlyipj1f32"
+path="res://.godot/imported/SP Letters whoosh.wav-183ef89860e7ea3282d72ac3b6cab3f3.sample"
+
+[deps]
+
+source_file="res://Audio/Music and sounds/SP Letters whoosh.wav"
+dest_files=["res://.godot/imported/SP Letters whoosh.wav-183ef89860e7ea3282d72ac3b6cab3f3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
