@@ -240,7 +240,6 @@ position = Vector2(-1383, -88)
 [node name="Grandma" type="Area2D" parent="."]
 position = Vector2(-405, 2)
 script = ExtResource("4_iu7xk")
-auto_solve = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Grandma"]
 position = Vector2(-1.5, -27.5)
