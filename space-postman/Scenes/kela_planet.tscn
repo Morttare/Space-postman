@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://6vb20pvot6v4" path="res://Scenes/person_with_queue_number_screen.tscn" id="8_ccxhs"]
 [ext_resource type="Script" path="res://Scripts/dialogue_person.gd" id="8_vcy22"]
 [ext_resource type="AudioStream" uid="uid://cxbycwihj2js1" path="res://Audio/Music and sounds/SP Elevator ding.wav" id="8_vlbdv"]
-[ext_resource type="Script" path="res://Scenes/elevator.gd" id="11_ltqri"]
+[ext_resource type="Script" path="res://Scripts/elevator.gd" id="11_ltqri"]
 [ext_resource type="Texture2D" uid="uid://bnyt6jhjnwxq4" path="res://Sprites/lost-soul.png" id="12_aibjp"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_8ox6v"]

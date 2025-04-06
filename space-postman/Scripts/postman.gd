@@ -11,6 +11,7 @@ var is_moving = false
 var direction = 3
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	initial_position = position
 
 func _physics_process(_delta: float) -> void:

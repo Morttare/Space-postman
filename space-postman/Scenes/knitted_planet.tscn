@@ -418,8 +418,12 @@ libraries = {
 "": SubResource("AnimationLibrary_h7d4v")
 }
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.25
+
 [connection signal="body_entered" from="Grandma" to="Grandma" method="_on_body_entered"]
 [connection signal="body_exited" from="Grandma" to="Grandma" method="_on_body_exited"]
 [connection signal="finished" from="PlanetMusic" to="." method="_on_planet_music_finished"]
 [connection signal="finished" from="PlanetMusic" to="PlanetMusic" method="_on_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Grandma" method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="Spaceship" method="_on_timer_timeout"]

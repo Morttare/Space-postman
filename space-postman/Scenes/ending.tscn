@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cir3adf7x8dwb"]
 
 [ext_resource type="Texture2D" uid="uid://2ufxo5sbm1tx" path="res://Sprites/ship_sprite.png" id="1_jxtk6"]
-[ext_resource type="Script" path="res://Scenes/ending_menu.gd" id="1_qs18i"]
+[ext_resource type="Script" path="res://Scripts/ending_menu.gd" id="1_qs18i"]
 [ext_resource type="Script" path="res://Scripts/endinganimation.gd" id="2_qqj38"]
 [ext_resource type="AudioStream" uid="uid://bv8fxrqrjaro5" path="res://Audio/Music and sounds/SP Credits scene.wav" id="3_xos7p"]
 [ext_resource type="Texture2D" uid="uid://q4eladyvs8pk" path="res://Sprites/Flyingstar.png" id="4_st8o3"]
@@ -140,7 +140,7 @@ scale = Vector2(0.944312, 0.932672)
 curve = SubResource("Curve2D_tuhwu")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(253.349, 439.896)
+position = Vector2(253.349, 439.897)
 rotation = -1.46352
 progress = 454.377
 rotates = false
