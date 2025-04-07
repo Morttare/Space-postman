@@ -7,16 +7,17 @@
 size = Vector2(202, 142)
 
 [node name="Spaceship" type="Area2D"]
+position = Vector2(0, -39)
 script = ExtResource("1_22uo6")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(55, -22)
+position = Vector2(55, -64)
 scale = Vector2(3, 3)
 texture = ExtResource("2_qndnn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(129, 14)
+position = Vector2(129, -28)
 shape = SubResource("RectangleShape2D_owc2d")
 
 [node name="Label" type="Label" parent="."]
