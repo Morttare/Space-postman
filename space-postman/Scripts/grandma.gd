@@ -4,6 +4,7 @@ var is_met = false
 
 @export var auto_solve = false
 @onready var postman = get_node("/root/KnittedPlanet/Postman")
+@onready var UI = get_node("/root/KnittedPlanet/CanvasLayer/UI")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -42,6 +43,10 @@ func _on_dialogic_signal(argument : String):
 		$"../Path2D/PathFollow2D/Piece3".visible = true
 		$"../Path2D/PathFollow2D/Piece4".visible = true
 		$"../AnimationPlayer".play("lettersflying")
+	elif argument == "find":
+		UI.visible = true
+	elif argument == "found":
+		UI.update_letters()
 
 
 func _on_timeline_end():

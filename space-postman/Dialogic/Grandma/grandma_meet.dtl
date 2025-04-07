@@ -20,3 +20,4 @@ Grandma: Oops! It also looks like the parts of the letters got carried away by w
 Grandma: Don't worry! They must be somewhere around here.
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 12.wav" volume="0.0"]
 Grandma: Return to me when you have collected them and I can teach you all about postmanship.
+[signal arg="find"]
