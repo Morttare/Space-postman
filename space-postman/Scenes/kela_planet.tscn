@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://mky1vnd54dbg"]
+[gd_scene load_steps=39 format=3 uid="uid://mky1vnd54dbg"]
 
 [ext_resource type="PackedScene" uid="uid://deifcmayqx1wp" path="res://Scenes/spaceship.tscn" id="1_3rit3"]
 [ext_resource type="Script" path="res://Scripts/kela_planet.gd" id="1_dkd6b"]
@@ -134,6 +134,9 @@ size = Vector2(173, 190)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vni62"]
 size = Vector2(128, 130)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_430kd"]
+size = Vector2(39, 30)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6di8"]
 size = Vector2(127, 117)
 
@@ -223,6 +226,12 @@ offset_top = 64.0
 offset_right = 73.0
 offset_bottom = 87.0
 text = "Press Space to talk"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Lost Person"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lost Person/StaticBody2D"]
+position = Vector2(-1.5, 1)
+shape = SubResource("RectangleShape2D_430kd")
 
 [node name="FinalBoss" type="Area2D" parent="."]
 position = Vector2(-2395, -886)

@@ -3,6 +3,7 @@ extends Area2D
 @export var letter_name : String
 @onready var postman = get_node("/root/KnittedPlanet/Postman")
 @onready var grandma = get_node("/root/KnittedPlanet/Grandma")
+@onready var UI = get_node("/root/KnittedPlanet/CanvasLayer/UI")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,6 +17,8 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		if $Label.visible:
 			Global.letters.append(letter_name)
+			Global.letter_pieces +=1
+			UI.update_score()
 			free()
 
 

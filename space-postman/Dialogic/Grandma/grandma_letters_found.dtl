@@ -3,6 +3,7 @@ join Postman center
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 1.wav" volume="0.0"]
 Grandma: Did you find all the pieces?
 [sound path="res://Audio/Music and sounds/SP Letter delivery success.wav" volume="0.0"]
+[signal arg="found"]
 Postman: Yes!
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 14.wav" volume="0.0"]
 Grandma: Perfect! I just remembered the letter was for Social Insurance Institution of Space
