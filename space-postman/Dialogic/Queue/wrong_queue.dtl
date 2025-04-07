@@ -1,6 +1,6 @@
 join Officer center
 join Postman_in_kela center
-Officer: Hello! Welcome to AstroSure! Homeplanet of  Galactic Social Security?
+Officer: Hello! Welcome to AstroSure! Homeplanet of  Galactic Social Security.
 Postman_in_kela: Hi! I need to deliver my grandma's pension form. Also this other person's complaint about not receiving housing benefit.
 Officer: I'm afraid I cannot help.
 [sound path="res://Audio/Music and sounds/SP Letter delivery fail.wav" volume="0.0"]

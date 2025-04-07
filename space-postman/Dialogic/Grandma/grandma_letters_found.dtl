@@ -6,21 +6,22 @@ Grandma: Did you find all the pieces?
 [signal arg="found"]
 Postman: Yes!
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 14.wav" volume="0.0"]
-Grandma: Perfect! I just remembered the letter was for Social Insurance Institution of Space
+Grandma: Perfect! I just remembered the letter was for Social Insurance Institution of Space also known as AstroSure.
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 18.wav" volume="0.0"]
 Grandma: Without this form they won't give me my well-earned pension! Bastards…
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 17.wav" volume="0.0"]
 Grandma: Anyway, it is of the utmost importance that this letter will get to its destination.
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 11.wav" volume="0.0"]
 Grandma: My dear, I know you are very new at this so let me help you start.
-Postman: You’ve got me enveloped in excitement!
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 7.wav" volume="0.0"]
-Grandma: As you know, Social Insurance Institution of Space is on an another planet than this one. It is on Liftune.
+Grandma: As you know, AstroSure is on an another planet than this one. \
+It is on Formulon 9.
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 8.wav" volume="0.0"]
 Grandma: You need to take your Mail Mobile to get there.
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 12.wav" volume="0.0"]
 Grandma: Mail Mobile is your best friend in space and it allows you to access other planets.
-Grandma: Delivering post isn't always the easiest job. There will be challenges, difficulties, hoaxes and trickery.
+Grandma: Delivering post isn't always the easiest job. \
+There will be challenges, difficulties, hoaxes and trickery.
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 17.wav" volume="0.0"]
 Grandma: So watch out and keep your eyes open!
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 16.wav" volume="0.0"]

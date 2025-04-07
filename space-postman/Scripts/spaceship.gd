@@ -13,6 +13,7 @@ func _process(_delta: float) -> void:
 			if Global.is_grandma_solved and Global.current_planet == 0:
 				self.visible = false
 				$"../Postman".visible = false
+				$"../Path2D2".visible = true
 				$"../PlanetMusic".stop()
 				$"../PlanetMusic/Spaceshiptakeoff".play()
 				$"../AnimationPlayer".play("planetexitanimation")
