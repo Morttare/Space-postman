@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://deifcmayqx1wp"]
+[gd_scene load_steps=6 format=3 uid="uid://deifcmayqx1wp"]
 
 [ext_resource type="Script" path="res://Scripts/spaceship.gd" id="1_22uo6"]
-[ext_resource type="Texture2D" uid="uid://2ufxo5sbm1tx" path="res://Sprites/ship_sprite.png" id="2_qndnn"]
+[ext_resource type="Texture2D" uid="uid://cdyl3d26bvlet" path="res://Sprites/ship_base_sprite.png" id="2_fynte"]
+[ext_resource type="Texture2D" uid="uid://uqgii4cwcm2w" path="res://Sprites/ship_wing_sprite.png" id="3_p0cxt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owc2d"]
 size = Vector2(202, 142)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mpqpy"]
+radius = 36.0
+height = 250.0
 
 [node name="Spaceship" type="Area2D"]
 position = Vector2(0, -39)
@@ -13,7 +18,11 @@ script = ExtResource("1_22uo6")
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(55, -64)
 scale = Vector2(3, 3)
-texture = ExtResource("2_qndnn")
+texture = ExtResource("2_fynte")
+
+[node name="Wing" type="Sprite2D" parent="Sprite"]
+z_index = 3
+texture = ExtResource("3_p0cxt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 physics_interpolation_mode = 1
@@ -27,6 +36,14 @@ offset_top = 68.0
 offset_right = 239.0
 offset_bottom = 91.0
 text = "Press Space to travel"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(52, -58)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(22, 22)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mpqpy")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
