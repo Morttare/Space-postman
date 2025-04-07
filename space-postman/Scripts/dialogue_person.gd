@@ -2,6 +2,8 @@ extends Area2D
 
 var is_met = false
 
+@onready var UI = get_node("/root/KelaPlanet/CanvasLayer/UI")
+
 @export var first_dialogue_timeline : String
 @export var other_dialogue_timeline : String
 @export var is_final_dialogue : bool
@@ -28,6 +30,13 @@ func _on_timeline_ended():
 	if is_final_dialogue:
 		get_tree().change_scene_to_file.call_deferred("res://Scenes/ending.tscn")
 
+func _on_dialogic_signal(argument : String):
+	if argument == "letter_given":
+		UI.vagrant_letter()
+	elif argument == "letters_delivered":
+		UI.clean()
+	elif argument == "new_letters":
+		UI.final_boss()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Postman":

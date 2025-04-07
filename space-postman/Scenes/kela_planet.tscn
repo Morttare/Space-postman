@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://mky1vnd54dbg"]
+[gd_scene load_steps=40 format=3 uid="uid://mky1vnd54dbg"]
 
 [ext_resource type="PackedScene" uid="uid://deifcmayqx1wp" path="res://Scenes/spaceship.tscn" id="1_3rit3"]
 [ext_resource type="Script" path="res://Scripts/kela_planet.gd" id="1_dkd6b"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://cxbycwihj2js1" path="res://Audio/Music and sounds/SP Elevator ding.wav" id="8_vlbdv"]
 [ext_resource type="Script" path="res://Scripts/elevator.gd" id="11_ltqri"]
 [ext_resource type="Texture2D" uid="uid://bnyt6jhjnwxq4" path="res://Sprites/lost-soul.png" id="12_aibjp"]
+[ext_resource type="PackedScene" uid="uid://cvff4x14q8s07" path="res://Scenes/ui.tscn" id="15_sxj7v"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_8ox6v"]
 tile_data = PackedInt32Array(0, 65536, 3, 65536, 65536, 3, 131072, 65536, 3, 196608, 65536, 3, 1, 65536, 3, 65537, 65536, 3, 131073, 65536, 3, 196609, 65536, 3, 2, 65536, 3, 65538, 65536, 3, 131074, 65536, 3, 196610, 65536, 3, 3, 65536, 3, 65539, 65536, 3, 131075, 65536, 3, 196611, 65536, 3)
@@ -821,6 +822,10 @@ modulo = 1
 [node name="Queue4" parent="Queuing place24" instance=ExtResource("8_ccxhs")]
 position = Vector2(2692, -686)
 modulo = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("15_sxj7v")]
 
 [connection signal="body_entered" from="Receptionist" to="Receptionist" method="_on_body_entered"]
 [connection signal="body_exited" from="Receptionist" to="Receptionist" method="_on_body_exited"]

@@ -1,8 +1,10 @@
 extends Node2D
 
+@onready var UI = get_node("/root/KelaPlanet/CanvasLayer/UI")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	UI.update_letters()
 	Global.current_planet = 1
 	#RenderingServer.set_default_clear_color("70899e") #Light wall colour
 	#RenderingServer.set_default_clear_color("324558") #Dark wall colour

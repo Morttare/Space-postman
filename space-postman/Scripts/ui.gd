@@ -12,3 +12,14 @@ func update_letters():
 	letterText.visible = false
 	pieceImage.visible = false
 	
+func vagrant_letter():
+	letterText.text = str("2")
+
+func clean():
+	letterText.visible = false
+	image.visible = false
+
+func final_boss():
+	letterText.text = str("10000000000000000000000")
+	letterText.visible = true
+	image.visible = true
