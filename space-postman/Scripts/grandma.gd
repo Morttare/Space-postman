@@ -25,7 +25,7 @@ func _process(_delta: float) -> void:
 					Dialogic.start("grandma_meet")
 				else:
 					if Global.is_grandma_solved:
-						#Dialogic.start("grandma_generic")
+						Dialogic.start("grandma_generic")
 						pass
 					elif len(Global.letters) == 4:
 						Global.is_grandma_solved = true
@@ -50,8 +50,7 @@ func _on_timeline_end():
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Postman":
-		if not Global.is_grandma_solved:
-			$Label.visible = true
+		$Label.visible = true
 
 
 

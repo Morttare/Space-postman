@@ -34,6 +34,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "correct_queue": "res://Dialogic/Queue/correct_queue.dtl",
 "final_dialogue": "res://Dialogic/final_dialogue.dtl",
+"go_away": "res://Dialogic/Queue/go_away.dtl",
 "grandma_generic": "res://Dialogic/Grandma/grandma_generic.dtl",
 "grandma_letters_found": "res://Dialogic/Grandma/grandma_letters_found.dtl",
 "grandma_meet": "res://Dialogic/Grandma/grandma_meet.dtl",

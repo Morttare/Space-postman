@@ -52,11 +52,14 @@ func _process(_delta: float) -> void:
 				print(Dialogic.VAR.has_letter)
 				#Dialogic.signal_event.connect(_on_dialogic_signal)
 				Dialogic.timeline_ended.connect(_on_timeline_ended)
-				if is_correct_queue:
-					Global.is_kela_solved = true
-					Dialogic.start("correct_queue")
+				if not Global.is_kela_solved:
+					if is_correct_queue:
+						Global.is_kela_solved = true
+						Dialogic.start("correct_queue")
+					else:
+						Dialogic.start("wrong_queue")
 				else:
-					Dialogic.start("wrong_queue")
+					Dialogic.start("go_away")
 
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
