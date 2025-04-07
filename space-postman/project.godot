@@ -26,6 +26,7 @@ directories/dch_directory={
 "Administrator": "res://Dialogic/Administrator.dch",
 "Grandma": "res://Dialogic/Grandma/Grandma.dch",
 "Lost_Person": "res://Dialogic/Lost_Person.dch",
+"Narrator": "res://Dialogic/Narrator.dch",
 "Officer": "res://Dialogic/Receptionist/Officer.dch",
 "Postman": "res://Dialogic/Grandma/Postman.dch",
 "Postman_in_kela": "res://Dialogic/Postman_in_kela.dch",
@@ -34,6 +35,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "correct_queue": "res://Dialogic/Queue/correct_queue.dtl",
 "final_dialogue": "res://Dialogic/final_dialogue.dtl",
+"go_away": "res://Dialogic/Queue/go_away.dtl",
 "grandma_generic": "res://Dialogic/Grandma/grandma_generic.dtl",
 "grandma_letters_found": "res://Dialogic/Grandma/grandma_letters_found.dtl",
 "grandma_meet": "res://Dialogic/Grandma/grandma_meet.dtl",

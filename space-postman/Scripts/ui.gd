@@ -14,6 +14,7 @@ func update_letters():
 	
 func vagrant_letter():
 	letterText.text = str("2")
+	letterText.visible = true
 
 func clean():
 	letterText.visible = false
