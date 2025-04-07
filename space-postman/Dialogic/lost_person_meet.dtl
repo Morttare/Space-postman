@@ -1,25 +1,40 @@
 join Lost_Person center
 join Postman_in_kela center
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 4.wav" volume="0.0"]
 Lost_Person: *crying*
 Postman_in_kela: What's wrong? What's your name?
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 1.wav" volume="0.0"]
 Lost_Person: I'm Vagrant and I can't find the right desk. I have been crying so much I can't even read the soaken queue number anymore.
 Postman_in_kela: Oh… I'm sorry. Why are you crying?
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 2.wav" volume="0.0"]
 Lost_Person: AstroSure has taken everything from me.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 3.wav" volume="0.0"]
 Lost_Person: I used to have a nice little hut on Kelarot-7. I was able to afford it with housing benefit.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 5.wav" volume="0.0"]
 Lost_Person: One day I just suddenly stopped receiving the benefit.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 2.wav" volume="0.0"]
 Lost_Person: I sent letters and forms. But nobody answered back.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 1.wav" volume="0.0"]
 Lost_Person: Eventually, they kicked me out since I couldn't afford the place.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 4.wav" volume="0.0"]
 Lost_Person: not just from the building… but the planet.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 3.wav" volume="0.0"]
 Lost_Person: I'm not welcome there anymore.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 5.wav" volume="0.0"]
 Lost_Person: And despite what the receptionist said it is hard to feel welcome here either.
 Postman_in_kela: Oof. That sounds rough.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 4.wav" volume="0.0"]
 Lost_Person: Yeah… I miss home.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 1.wav" volume="0.0"]
 Lost_Person: I regret I was so quiet and didn't reach out to people when I had the chance.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 3.wav" volume="0.0"]
 Lost_Person: Also I regret that I left my phone there.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 2.wav" volume="0.0"]
 Lost_Person: It has been SO boring here without it.
 Postman_in_kela: Right.
 Postman_in_kela: Well, don't worry! My job is to deliver mail.
 Postman_in_kela: Give me your letter and I'll make sure it arrives safely to its destination.
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 4.wav" volume="0.0"]
 Lost_Person: Wow! Thank you! Finally I'm free from this maze!
 Postman_in_kela: No problem!
 Postman_in_kela: Into the maze I go. What where the directions again??

@@ -1,4 +1,6 @@
 join Grandma center
 join Postman center
+[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 18.wav" volume="0.0"]
 Grandma: Hurry up, dear!
+[sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 16.wav" volume="0.0"]
 Grandma: My pension is waiting!

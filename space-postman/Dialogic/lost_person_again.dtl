@@ -1,4 +1,5 @@
 join Lost_Person center
 join Postman_in_kela center
+[sound path="res://Audio/Music and sounds/Alien cries/Alien cry 5.wav" volume="0.0"]
 Lost_Person: Boohoo... \
 \:´(

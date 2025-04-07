@@ -1,16 +1,25 @@
 join Officer center
 join Postman_in_kela center
+[sound path="res://Audio/Music and sounds/Office worker sighs/Sigh6.wav" volume="0.0"]
 Officer: Hello! Welcome to AstroSure! Homeplanet of  Galactic Social Security.
 Postman_in_kela: Hi! I need to deliver my grandma's pension form. Also this other person's complaint about not receiving housing benefit.
+[sound path="res://Audio/Music and sounds/Office worker sighs/Sigh5.wav" volume="0.0"]
 Officer: You came to the right place!
 [sound path="res://Audio/Music and sounds/SP Letter delivery success.wav" volume="0.0"]
 Officer: I'm surprised you found me.
+[sound path="res://Audio/Music and sounds/Office worker sighs/Sigh2.wav" volume="0.0"]
 Officer: Now let's see that form number.
+[sound path="res://Audio/Music and sounds/Office worker sighs/Sigh6.wav" volume="0.0"]
 Officer: Wait a minute.
+[sound path="res://Audio/Music and sounds/Office worker sighs/Sigh3.wav" volume="0.0"]
 Officer: Does your grandma live alone? On Stitchoria?
 Postman_in_kela: Yes. She is the only one there.
+[sound path="res://Audio/Music and sounds/Office worker sighs/Sigh1.wav" volume="0.0"]
 Officer: I'm not qualified to deal with solo planet forms.
+[sound path="res://Audio/Music and sounds/Office worker sighs/Sigh7.wav" volume="0.0"]
 Officer: Nor complaints for that matter.
 Postman_in_kela: But you just said
+[sound path="res://Audio/Music and sounds/Office worker sighs/Sigh4.wav" volume="0.0"]
 Officer: You will have to take these to Luna Beneficia the Transgalactic Social Insurance Claims Administrator.
-Officer: Take the elevator there…
+[sound path="res://Audio/Music and sounds/Office worker sighs/Sigh2.wav" volume="0.0"]
+Officer: Take the elevator back in the main hall. Go left from the receptionist.
