@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://2ch1j8frd7j0"
+path="res://.godot/imported/Alien cry 2.wav-d8b99bbc2e2e788bb708967f5fe1967b.sample"
+
+[deps]
+
+source_file="res://Audio/Music and sounds/Alien cries/Alien cry 2.wav"
+dest_files=["res://.godot/imported/Alien cry 2.wav-d8b99bbc2e2e788bb708967f5fe1967b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
