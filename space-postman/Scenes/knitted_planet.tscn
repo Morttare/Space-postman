@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://h8wsiccegn03"]
+[gd_scene load_steps=31 format=3 uid="uid://h8wsiccegn03"]
 
 [ext_resource type="PackedScene" uid="uid://dinasir8kgc7n" path="res://Scenes/postman.tscn" id="1_p0y2u"]
 [ext_resource type="Texture2D" uid="uid://d3lnmsoucevo1" path="res://Tiles/planet_0_path.png" id="2_8rmvj"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://m4gi1k1nhv7o" path="res://Sprites/letter_piece.png" id="12_5hi7u"]
 [ext_resource type="AudioStream" uid="uid://dorrq604r0j21" path="res://Audio/Music and sounds/SP Menu Playbutton v1.wav" id="13_mi5x0"]
 [ext_resource type="Texture2D" uid="uid://2ufxo5sbm1tx" path="res://Sprites/ship_sprite.png" id="16_jvhdk"]
+[ext_resource type="PackedScene" uid="uid://cvff4x14q8s07" path="res://Scenes/ui.tscn" id="18_6j74t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_inr5x"]
 texture = ExtResource("7_03oko")
@@ -439,6 +440,11 @@ libraries = {
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.25
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("18_6j74t")]
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Grandma" to="Grandma" method="_on_body_entered"]
 [connection signal="body_exited" from="Grandma" to="Grandma" method="_on_body_exited"]

@@ -149,7 +149,7 @@ script = ExtResource("1_dkd6b")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
-position = Vector2(8, -16)
+position = Vector2(6, -16)
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_enw5m")
 format = 2
@@ -830,6 +830,7 @@ modulo = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("15_sxj7v")]
+metadata/_edit_use_anchors_ = true
 
 [node name="Reception" type="Sprite2D" parent="."]
 position = Vector2(294, -711)
