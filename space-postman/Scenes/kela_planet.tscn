@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://mky1vnd54dbg"]
+[gd_scene load_steps=42 format=3 uid="uid://mky1vnd54dbg"]
 
 [ext_resource type="PackedScene" uid="uid://deifcmayqx1wp" path="res://Scenes/spaceship.tscn" id="1_3rit3"]
 [ext_resource type="Script" path="res://Scripts/kela_planet.gd" id="1_dkd6b"]
@@ -14,7 +14,9 @@
 [ext_resource type="AudioStream" uid="uid://cxbycwihj2js1" path="res://Audio/Music and sounds/SP Elevator ding.wav" id="8_vlbdv"]
 [ext_resource type="Script" path="res://Scripts/elevator.gd" id="11_ltqri"]
 [ext_resource type="Texture2D" uid="uid://bnyt6jhjnwxq4" path="res://Sprites/lost-soul.png" id="12_aibjp"]
+[ext_resource type="Texture2D" uid="uid://bgq0m88l2ewhk" path="res://Tiles/elevator.png" id="14_m2san"]
 [ext_resource type="PackedScene" uid="uid://cvff4x14q8s07" path="res://Scenes/ui.tscn" id="15_sxj7v"]
+[ext_resource type="Texture2D" uid="uid://ck7llpj16k2ed" path="res://Sprites/reception.png" id="16_stsep"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_8ox6v"]
 tile_data = PackedInt32Array(0, 65536, 3, 65536, 65536, 3, 131072, 65536, 3, 196608, 65536, 3, 1, 65536, 3, 65537, 65536, 3, 131073, 65536, 3, 196609, 65536, 3, 2, 65536, 3, 65538, 65536, 3, 131074, 65536, 3, 196610, 65536, 3, 3, 65536, 3, 65539, 65536, 3, 131075, 65536, 3, 196611, 65536, 3)
@@ -147,7 +149,7 @@ script = ExtResource("1_dkd6b")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
-position = Vector2(5, -15)
+position = Vector2(8, -16)
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_enw5m")
 format = 2
@@ -161,7 +163,6 @@ position = Vector2(-194, 79)
 
 [node name="Postman" parent="." instance=ExtResource("3_o2e6m")]
 position = Vector2(-44, 174)
-scale = Vector2(0.75, 0.75)
 
 [node name="KelaMusic" type="AudioStreamPlayer2D" parent="Postman"]
 position = Vector2(-396, -301.333)
@@ -189,6 +190,7 @@ first_dialogue_timeline = "receptionist_meet"
 other_dialogue_timeline = "receptionist_again"
 
 [node name="Sprite2D" type="Sprite2D" parent="Receptionist"]
+visible = false
 modulate = Color(0, 0, 0, 1)
 position = Vector2(0, -40)
 scale = Vector2(0.2, 0.15)
@@ -266,7 +268,9 @@ target_x = -3400.0
 target_y = -550.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Elevator"]
-texture = ExtResource("7_yo1gs")
+position = Vector2(25, -10)
+scale = Vector2(3, 3)
+texture = ExtResource("14_m2san")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator"]
 position = Vector2(-0.5, 48.5)
@@ -826,6 +830,11 @@ modulo = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("15_sxj7v")]
+
+[node name="Reception" type="Sprite2D" parent="."]
+position = Vector2(294, -711)
+scale = Vector2(3, 3)
+texture = ExtResource("16_stsep")
 
 [connection signal="body_entered" from="Receptionist" to="Receptionist" method="_on_body_entered"]
 [connection signal="body_exited" from="Receptionist" to="Receptionist" method="_on_body_exited"]
