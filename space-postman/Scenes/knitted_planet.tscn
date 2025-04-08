@@ -369,6 +369,7 @@ stream = ExtResource("12_02dyk")
 
 [node name="Spaceshiptakeoff" type="AudioStreamPlayer2D" parent="PlanetMusic"]
 stream = ExtResource("13_mi5x0")
+volume_db = 15.0
 
 [node name="House" type="StaticBody2D" parent="."]
 position = Vector2(-203.828, -124.625)

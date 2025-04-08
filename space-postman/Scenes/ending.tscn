@@ -140,7 +140,7 @@ scale = Vector2(0.944312, 0.932672)
 curve = SubResource("Curve2D_tuhwu")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(253.349, 439.897)
+position = Vector2(253.349, 439.896)
 rotation = -1.46352
 progress = 454.377
 rotates = false
@@ -190,7 +190,7 @@ Level design: Terho Thorel
 Programming: Max Jauhiainen, Terho Thorel
 Graphic design: Kasper Ojuva , Camilo Alvarez 
 Audio design: Kari Söderqvist 
-Animation: Kari Söderqvist "
+Animations: Kari Söderqvist "
 
 [node name="Endingmusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_xos7p")
