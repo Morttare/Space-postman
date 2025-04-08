@@ -26,6 +26,7 @@ directories/dch_directory={
 "Administrator": "res://Dialogic/Administrator.dch",
 "Grandma": "res://Dialogic/Grandma/Grandma.dch",
 "Lost_Person": "res://Dialogic/Lost_Person.dch",
+"Narrator": "res://Dialogic/Narrator.dch",
 "Officer": "res://Dialogic/Receptionist/Officer.dch",
 "Postman": "res://Dialogic/Grandma/Postman.dch",
 "Postman_in_kela": "res://Dialogic/Postman_in_kela.dch",

@@ -1,35 +1,54 @@
 join Administrator center
 join Postman_in_kela center
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 13.wav" volume="0.0"]
 Administrator: Hello! Welcome to AstroSure! Homeplanet of Galactic Social Security.
 Postman_in_kela: Hi! I would like to deliver my grandma's pension form and this complaint about housing benefit.
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 9.wav" volume="0.0"]
 Administrator: Always with the complaints!
 Postman_in_kela: Sorry. Don't shoot the messenger, though.
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 7.wav" volume="0.0"]
 Administrator: Fine... this time.
+[signal arg="letters_delivered"]
 Administrator: *reading the complaint*
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 10.wav" volume="0.0"]
 Administrator: …
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 3.wav" volume="0.0"]
 Administrator: *starts laughing*
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 4.wav" volume="0.0"]
 Administrator: *evil laughter*
 Postman_in_kela: Are you alright?
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 5.wav" volume="0.0"]
 Administrator: Yes! More than alright.
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 6.wav" volume="0.0"]
 Administrator: Looks like my revenge worked >\:)
 Postman_in_kela: What?!
-Administrator: I got GHOSTED on a love application. Like SO RUDE. 
-Administrator: So this is what you get for messing with WaitingInQueueForLove's feelings on StarSwipe, Mr. MilkyWayBae
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 11.wav" volume="0.0"]
+Administrator: I got GHOSTED on a love application. Like SO RUDE.
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 12.wav" volume="0.0"]
+Administrator: So this is what you get for messing with WaitingInQueueForLove's feelings on StarSwipe, Mr. MilkyWayBae.
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 3.wav" volume="0.0"]
 Administrator: Hahahahhhaaa
-Administrator: You're done for Vagrant.
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 5.wav" volume="0.0"]
+Administrator: You're done for Vagrant, or should I say Mr. MilkyWayBae.
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 13.wav" volume="0.0"]
 Administrator: Harder to leave on read when you have no place to do it >\:)
 Postman_in_kela: This is insane!
 Postman_in_kela: What are you doing mr... ms... dear... uh...\
 YOU Transgalactic Social Insurance Claims Administrator?
 Postman_in_kela: This is a disgusting abuse of power!\
 You must give them their benefit back.
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 10.wav" volume="0.0"]
 Administrator: But I don't want to.
 Postman_in_kela: YOU MUST!
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 11.wav" volume="0.0"]
 Administrator: Alright, alright.
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 6.wav" volume="0.0"]
 Administrator: I'll give them the benefit back and make sure your grandma is taken care of... IF
+[sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 8.wav" volume="0.0"]
 Administrator: You will deliver all of these payment reminders, benefit approval notices, more importantly benefit denial notices, account confirmations, payment verifications, status updates, requests for additional documentation, appeal instructions, fraud investigations, annual review reminders, requalification notices, termination of benefit notices
 Postman_in_kela: \:O \
 Uuhhh. Okay. I guess.
+[signal arg="new_letters"]
 Postman_in_kela: I want my grandma to have a nice retirement.
 Postman_in_kela: Vagrant seemed pretty down too.
 Postman_in_kela: Alright! It is my duty as a postman to make sure mail is delivered.
