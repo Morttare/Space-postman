@@ -35,9 +35,9 @@ texture = ExtResource("2_jki6l")
 [node name="LetterImage" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 29.0
-offset_top = 17.0
-offset_right = 111.0
-offset_bottom = 99.0
+offset_left = 118.0
+offset_top = 18.0
+offset_right = 200.0
+offset_bottom = 100.0
 texture = ExtResource("4_u0usf")
 expand_mode = 1

@@ -8,6 +8,7 @@ Administrator: Always with the complaints!
 Postman_in_kela: Sorry. Don't shoot the messenger, though.
 [sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 7.wav" volume="0.0"]
 Administrator: Fine... this time.
+[signal arg="letters_delivered"]
 Administrator: *reading the complaint*
 [sound path="res://Audio/Music and sounds/Evil boothbabe/Maniac 10.wav" volume="0.0"]
 Administrator: …
@@ -47,6 +48,7 @@ Administrator: I'll give them the benefit back and make sure your grandma is tak
 Administrator: You will deliver all of these payment reminders, benefit approval notices, more importantly benefit denial notices, account confirmations, payment verifications, status updates, requests for additional documentation, appeal instructions, fraud investigations, annual review reminders, requalification notices, termination of benefit notices
 Postman_in_kela: \:O \
 Uuhhh. Okay. I guess.
+[signal arg="new_letters"]
 Postman_in_kela: I want my grandma to have a nice retirement.
 Postman_in_kela: Vagrant seemed pretty down too.
 Postman_in_kela: Alright! It is my duty as a postman to make sure mail is delivered.

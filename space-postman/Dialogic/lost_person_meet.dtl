@@ -36,5 +36,6 @@ Postman_in_kela: Well, don't worry! My job is to deliver mail.
 Postman_in_kela: Give me your letter and I'll make sure it arrives safely to its destination.
 [sound path="res://Audio/Music and sounds/Alien cries/Alien cry 4.wav" volume="0.0"]
 Lost_Person: Wow! Thank you! Finally I'm free from this maze!
+[signal arg="letter_given"]
 Postman_in_kela: No problem!
 Postman_in_kela: Into the maze I go. What where the directions again??
