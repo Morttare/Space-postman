@@ -42,6 +42,7 @@ func _on_dialogic_signal(argument : String):
 		$"../Path2D/PathFollow2D/Piece2".visible = true
 		$"../Path2D/PathFollow2D/Piece3".visible = true
 		$"../Path2D/PathFollow2D/Piece4".visible = true
+		$"../AnimationPlayer".speed_scale = 0.5
 		$"../AnimationPlayer".play("lettersflying")
 	elif argument == "find":
 		UI.visible = true

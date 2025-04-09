@@ -16,6 +16,7 @@ func _process(_delta: float) -> void:
 				$"../Path2D2".visible = true
 				$"../PlanetMusic".stop()
 				$"../PlanetMusic/Spaceshiptakeoff".play()
+				$"../AnimationPlayer".speed_scale = 1
 				$"../AnimationPlayer".play("planetexitanimation")
 				
 				$"../Timer".start()

@@ -9,11 +9,13 @@ Grandma: And I have done more than my fair share of it! It is time to retire!
 [sound path="res://Audio/Music and sounds/SP Letter rip twice.wav" volume="0.0"]
 Grandma: *rips a letter in 4*
 Postman: Uuhhh…
-[signal arg="rip"]
 Postman: O_O
 Postman: Wasn't I suppose to deliver that?
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 16.wav" volume="0.0"]
 Grandma: My Yarn! You're right! I got too carried away…
+[sound path="res://Audio/Music and sounds/SP Letters whoosh.wav" volume="0.0"]
+[signal arg="rip"]
+[wait time="2.0"]
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 6.wav" volume="0.0"]
 Grandma: Oops! It also looks like the parts of the letters got carried away by wind.
 [sound path="res://Audio/Music and sounds/Grandma speech sounds/Grandma sound 7.wav" volume="0.0"]

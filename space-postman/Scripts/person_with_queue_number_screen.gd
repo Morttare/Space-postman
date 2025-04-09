@@ -24,7 +24,7 @@ func _ready() -> void:
 	
 func _on_timer_timeout() -> void:
 	var new_number = floor((randi() % max_number)/modulo)*modulo
-	if new_number == 0:
+	if new_number == 0 or (new_number == Global.queue_number and not is_correct_queue):
 		new_number += modulo
 	update_screen(new_number)
 
