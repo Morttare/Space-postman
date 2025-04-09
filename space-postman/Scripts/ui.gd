@@ -4,6 +4,7 @@ extends Control
 @onready var pieceImage = get_node("PieceImage")
 @onready var image = get_node("LetterImage")
 
+
 func update_score():
 	letterText.text = str(Global.letter_pieces) + str("/4")
 
