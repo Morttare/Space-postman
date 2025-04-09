@@ -265,8 +265,8 @@ text = "Press Space to talk"
 [node name="Elevator" type="Area2D" parent="."]
 position = Vector2(-497, -654)
 script = ExtResource("11_ltqri")
-target_x = -3400.0
-target_y = -550.0
+target_x = -3350.0
+target_y = -650.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Elevator"]
 position = Vector2(25, -10)
@@ -286,7 +286,7 @@ text = "            Press Space to use
 Vertical Transportation Decive"
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(-3400, -550)
+position = Vector2(-3350, -650)
 
 [node name="Queuing place" type="Node2D" parent="."]
 

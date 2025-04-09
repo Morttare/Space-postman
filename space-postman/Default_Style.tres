@@ -36,6 +36,9 @@ overrides = {}
 script = ExtResource("1_rcwms")
 scene = ExtResource("5_2yjto")
 overrides = {
+"box_color_custom": "Color(0, 0, 0, 0)",
+"box_color_use_global": "false",
+"name_label_box_offset": "Vector2(50, 0)",
 "text_custom_color": "Color(0, 0, 0, 1)",
 "text_use_global_color": "false"
 }

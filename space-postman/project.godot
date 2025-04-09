@@ -70,7 +70,7 @@ text/autopauses={}
 variables={
 "has_letter": false
 }
-layout/style_list=["res://Default_Style.tres", "res://Kela_Style.tres"]
+layout/style_list=["res://Default_Style.tres", "res://Kela_Style.tres", "res://Postman_Style.tres"]
 layout/default_style="res://Default_Style.tres"
 glossary/default_case_sensitive=true
 
