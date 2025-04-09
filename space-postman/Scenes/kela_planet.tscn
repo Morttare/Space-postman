@@ -839,8 +839,8 @@ scale = Vector2(3, 3)
 texture = ExtResource("16_stsep")
 
 [node name="Elevatordoor" type="Sprite2D" parent="."]
-position = Vector2(-3353, -746)
-scale = Vector2(3, 2.625)
+position = Vector2(-3353, -757.5)
+scale = Vector2(3, 3.10417)
 texture = ExtResource("14_m2san")
 
 [connection signal="body_entered" from="Receptionist" to="Receptionist" method="_on_body_entered"]
