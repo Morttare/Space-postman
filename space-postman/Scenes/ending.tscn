@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/endinganimation.gd" id="2_qqj38"]
 [ext_resource type="AudioStream" uid="uid://bv8fxrqrjaro5" path="res://Audio/Music and sounds/SP Credits scene.wav" id="3_xos7p"]
 [ext_resource type="Texture2D" uid="uid://q4eladyvs8pk" path="res://Sprites/Flyingstar.png" id="4_st8o3"]
-[ext_resource type="VideoStream" path="res://Ending v1.ogv" id="6_bw3ad"]
+[ext_resource type="VideoStream" path="res://Ending.ogv" id="6_x0g5d"]
 [ext_resource type="FontFile" uid="uid://b03iyj4stw5l7" path="res://Pixel Craft.ttf" id="7_l28w4"]
 
 [sub_resource type="Curve2D" id="Curve2D_tuhwu"]
@@ -144,7 +144,7 @@ curve = SubResource("Curve2D_tuhwu")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 visible = false
-position = Vector2(253.349, 439.897)
+position = Vector2(253.349, 439.896)
 rotation = -1.46352
 progress = 454.377
 rotates = false
@@ -332,15 +332,17 @@ rotation = 3.14654
 texture = ExtResource("4_st8o3")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-offset_left = -49.0
-offset_top = -14.0
-offset_right = 1871.0
-offset_bottom = 1074.0
-scale = Vector2(0.7, 0.7)
-stream = ExtResource("6_bw3ad")
+offset_left = -127.0
+offset_top = -45.0
+offset_right = 1793.0
+offset_bottom = 1043.0
+scale = Vector2(0.75, 0.75)
+stream = ExtResource("6_x0g5d")
+volume_db = -80.0
 autoplay = true
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = 779.0
 offset_top = 202.0
 offset_right = 1040.0
@@ -350,6 +352,7 @@ theme_override_font_sizes/font_size = 39
 text = "You did great!"
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 offset_left = 672.0
 offset_top = 58.0
 offset_right = 1150.0
@@ -359,6 +362,7 @@ theme_override_font_sizes/font_size = 124
 text = "The End"
 
 [node name="Label3" type="Label" parent="."]
+visible = false
 offset_left = 652.0
 offset_top = 315.0
 offset_right = 1245.0
@@ -375,6 +379,7 @@ Audio design: Kari Söderqvist
 Animations: Kari Söderqvist, Camilo Alvarez"
 
 [node name="Label5" type="Label" parent="."]
+visible = false
 offset_left = 651.0
 offset_top = 310.0
 offset_right = 1244.0
@@ -384,6 +389,7 @@ theme_override_font_sizes/font_size = 29
 text = "Made by Team Handsoff"
 
 [node name="Label4" type="Label" parent="."]
+visible = false
 anchors_preset = -1
 anchor_left = 0.472
 anchor_top = 0.515
