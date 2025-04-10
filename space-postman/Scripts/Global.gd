@@ -14,5 +14,7 @@ func reset_game():
 	is_grandma_solved = false
 	is_kela_solved = false
 	current_planet = 0
-	queue_number = 0
+	letter_pieces = 0
+	is_allowed_to_move = true
+	queue_number = 49
 	letters = []

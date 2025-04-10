@@ -403,3 +403,6 @@ theme_override_colors/font_color = Color(0.286275, 0.768627, 1, 1)
 theme_override_fonts/font = ExtResource("7_l28w4")
 theme_override_font_sizes/font_size = 25
 text = "PRESS SPACE TO RETURN TO MENU"
+
+[connection signal="finished" from="Endingmusic" to="." method="_on_endingmusic_finished"]
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

@@ -8,6 +8,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("interact"):
-		Global.reset_game()
-		get_tree().change_scene_to_file.call_deferred("res://Scenes/Mainmenu.tscn")
+	pass
+
+
+func _on_video_stream_player_finished() -> void:
+	Global.reset_game()
+	print("video end")
+	get_tree().change_scene_to_file.call_deferred("res://Scenes/Mainmenu.tscn")
