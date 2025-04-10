@@ -15,7 +15,7 @@ func _ready():
 	initial_position = position
 
 func _physics_process(_delta: float) -> void:
-	if is_moving == false and Dialogic.current_timeline == null:
+	if is_moving == false and Dialogic.current_timeline == null and Global.is_allowed_to_move:
 		process_player_input()
 		move_and_slide()
 	else:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://h8wsiccegn03"]
+[gd_scene load_steps=32 format=3 uid="uid://h8wsiccegn03"]
 
 [ext_resource type="PackedScene" uid="uid://dinasir8kgc7n" path="res://Scenes/postman.tscn" id="1_p0y2u"]
 [ext_resource type="Texture2D" uid="uid://d3lnmsoucevo1" path="res://Tiles/planet_0_path.png" id="2_8rmvj"]
@@ -86,6 +86,9 @@ sources/1 = SubResource("TileSetAtlasSource_o4lcj")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y6p5m"]
 size = Vector2(173, 182)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mc8s"]
+size = Vector2(60, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcg0k"]
 size = Vector2(165.448, 39.5833)
@@ -338,6 +341,12 @@ offset_top = 26.0
 offset_right = 73.0
 offset_bottom = 49.0
 text = "Press Space to talk"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grandma"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grandma/StaticBody2D"]
+position = Vector2(-1, -29.5)
+shape = SubResource("RectangleShape2D_3mc8s")
 
 [node name="Broken letter" parent="." instance=ExtResource("5_oi0vk")]
 position = Vector2(-98, -702)

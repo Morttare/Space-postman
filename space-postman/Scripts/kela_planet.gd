@@ -6,6 +6,7 @@ extends Node2D
 func _ready() -> void:
 	Global.letters.append("retirement_form")
 	UI.update_letters()
+	UI.visible = true
 	Global.current_planet = 1
 	#RenderingServer.set_default_clear_color("70899e") #Light wall colour
 	#RenderingServer.set_default_clear_color("324558") #Dark wall colour

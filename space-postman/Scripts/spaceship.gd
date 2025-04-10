@@ -18,7 +18,7 @@ func _process(_delta: float) -> void:
 				$"../PlanetMusic/Spaceshiptakeoff".play()
 				$"../AnimationPlayer".speed_scale = 1
 				$"../AnimationPlayer".play("planetexitanimation")
-				
+				Global.is_allowed_to_move = false
 				$"../Timer".start()
 			elif Global.is_kela_solved and Global.current_planet == 1:
 				get_tree().change_scene_to_file("res://Scenes/ending.tscn")
@@ -36,4 +36,5 @@ func _on_body_exited(body: Node2D) -> void:
 
 
 func _on_timer_timeout() -> void:
+	Global.is_allowed_to_move = true
 	get_tree().change_scene_to_file("res://Scenes/kela_planet.tscn")
