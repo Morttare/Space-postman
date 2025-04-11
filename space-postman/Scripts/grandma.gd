@@ -20,6 +20,7 @@ func _process(_delta: float) -> void:
 		if $Label.visible:
 			if Dialogic.current_timeline == null:
 				Dialogic.timeline_ended.connect(_on_timeline_end)
+				$Label.visible = false
 				if not is_met:
 					is_met = true
 					Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -52,7 +53,6 @@ func _on_dialogic_signal(argument : String):
 
 func _on_timeline_end():
 	Dialogic.timeline_ended.disconnect(_on_timeline_end)
-	$Label.visible = false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Postman":

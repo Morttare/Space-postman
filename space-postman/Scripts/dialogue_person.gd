@@ -17,6 +17,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		if $Label.visible:
 			if Dialogic.current_timeline == null:
+				$Label.visible = false
 				Dialogic.signal_event.connect(_on_dialogic_signal)
 				Dialogic.timeline_ended.connect(_on_timeline_ended)
 				if not is_met:
@@ -28,7 +29,6 @@ func _process(_delta: float) -> void:
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
 	Dialogic.signal_event.disconnect(_on_dialogic_signal)
-	$Label.visible = false
 	if is_final_dialogue:
 		get_tree().change_scene_to_file.call_deferred("res://Scenes/ending.tscn")
 
