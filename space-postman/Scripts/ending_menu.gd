@@ -11,7 +11,7 @@ func _process(_delta: float) -> void:
 	pass
 
 
-func _on_video_stream_player_finished() -> void:
+func _on_endingmusic_finished() -> void:
 	Global.reset_game()
 	print("video end")
 	get_tree().change_scene_to_file.call_deferred("res://Scenes/Mainmenu.tscn")
