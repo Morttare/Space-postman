@@ -49,7 +49,6 @@ func _process(_delta: float) -> void:
 			if Dialogic.current_timeline == null:
 				talk_label.visible = false
 				Dialogic.VAR.has_letter = "retirement_form" in Global.letters
-				Dialogic.timeline_ended.connect(_on_timeline_ended)
 				if not Global.is_kela_solved:
 					if is_correct_queue:
 						Global.is_kela_solved = true
@@ -58,9 +57,6 @@ func _process(_delta: float) -> void:
 						Dialogic.start("wrong_queue")
 				else:
 					Dialogic.start("go_away")
-
-func _on_timeline_ended():
-	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Postman":
