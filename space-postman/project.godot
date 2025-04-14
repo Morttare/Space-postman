@@ -13,8 +13,9 @@ config_version=5
 config/name="Space postman"
 run/main_scene="res://Scenes/Mainmenu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://Sprites/icon.png"
-config/windows_native_icon="res://Sprites/icon.ico"
+config/icon="res://icons/icon.png"
+config/macos_native_icon="res://icons/icon_32x32.icns"
+config/windows_native_icon="res://icons/icon_32x32.ico"
 
 [autoload]
 
